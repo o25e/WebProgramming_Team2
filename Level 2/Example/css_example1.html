@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 개념 페이지</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #87CEEB;
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            margin: 8px 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .content-box {
+            background-color: #87CEEB;
+            border-radius: 15px;
+            padding: 25px;
+            width: 65%;
+            height: 65vh;
+            margin: 0 auto 25px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+        .nav-buttons {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 0 10%;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .home-btn {
+            background-color: #FFA500;
+        }
+
+        .quiz-btn {
+            background-color: #008000;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+
+    <h1>선택자 우선순위</h1>
+    <div class="content-box">
+        <h3>우선순위 계산 규칙:</h3>
+        <p>1. 인라인 스타일 (1000점)</p>
+        <p>2. ID 선택자 (100점)</p>
+        <p>3. 클래스/가상 클래스 선택자 (10점)</p>
+        <p>4. 요소 선택자 (1점)</p>
+        
+        <pre>
+#nav { color: red; }
+.item { color: blue; }
+li { color: green; }
+        </pre>
+        <p>!important > 인라인 스타일 > ID > 클래스 > 요소</p>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="../Level 2.html" class="button home-btn">홈으로</a>
+        <a href="../Quiz/css_quiz1.html" class="button quiz-btn">테스트 시작</a>
+    </div>
+</body>
+</html>

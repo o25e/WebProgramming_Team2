@@ -1,0 +1,35 @@
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-image: linear-gradient(to bottom, #d06dfb,#ffffff,rgb(250, 193, 241));
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height:100%;
+    margin:0;
+}
+.title{
+    font-family: "Jua", sans-serif;
+    color: white; 
+    -webkit-text-stroke: 1px rgb(0, 0, 0); 
+    margin-left: 50px;
+    margin-top: 0px;
+    font-size: 50px;
+}
+.explanation {
+    font-family: "Jua", sans-serif;
+    color: white; 
+    -webkit-text-stroke: 1px rgb(0, 0, 0); 
+    margin-left: 50px;
+    margin-top:200px;
+    font-size: 36px; 
+}
+.skeleton{
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    width: 350px; 
+    height: auto;
+}

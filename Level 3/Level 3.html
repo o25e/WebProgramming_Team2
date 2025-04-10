@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS 스터디</title>
+    <link rel="stylesheet" href="Level 3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed-header">
+        <h1>Level 3</h1>
+        
+        <!-- 메뉴바 추가 -->
+        <nav class="level-nav">
+            <a href="../home.html">홈</a>
+            <a href="../Level 1/Level 1.html">Level 1</a>
+            <a href="../Level 2/Level 2.html">Level 2</a>
+            <a href="../Level 3/Level 3.html" class="active">Level 3</a>
+            <a href="../Calculator/calculator.html">Calculator</a>
+        </nav>
+    </header>
+    <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div class="container">
+        <div class="study-box" onclick="openStudy(1)" id="box1"><img src="Web.png" alt="예제 1"></div>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevPage()">이전</button>
+        <button onclick="nextPage()">다음</button>
+    </div>
+
+    <footer>
+        <p>© 2025 HTML & CSS Study | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // 각 스터디 박스를 클릭했을 때 해당 학습 페이지로 이동
+        function openStudy(id) {
+            window.open(`./Test/web_test${id}.html`, '_blank');
+            checkCompletion(id);
+        }
+
+        // 홈 페이지에서 진행도 업데이트 로직 추가
+        document.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem('returningFromQuiz') === 'true') {
+                localStorage.removeItem('returningFromQuiz');
+                updateProgress();
+            }
+        });
+
+        function updateProgress() {
+            const progressBar = document.getElementById('progress-bar');
+            let completedStudies = 0;
+            for (let i = 1; i <= 10; i++) {
+                if (localStorage.getItem(`quizCompleted${i}`) === 'true') {
+                    completedStudies++;
+                    document.getElementById(`box${i}`).classList.add('completed');
+                }
+            }
+            const progressPercentage = (completedStudies / 10) * 100;
+            progressBar.style.width = `${progressPercentage}%`;
+        }
+
+        // 이전 페이지 버튼 클릭시
+        function prevPage() {
+            alert("이전 페이지로 이동합니다.");
+        }
+
+        // 다음 페이지 버튼 클릭시
+        function nextPage() {
+            alert("다음 페이지로 이동합니다.");
+        }
+    </script>
+</body>
+</html>
