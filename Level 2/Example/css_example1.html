@@ -3,49 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS 개념 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Level 2.css">
     <style>
         body {
+            padding-top: 0;
+        }
+
+        .header {
+            background-color: #df777c;
+            color: white;
+            padding: 25px;
             margin: 0;
-            font-family: Arial, sans-serif;
-        }
 
-        header {
-            background-color: #87CEEB;
-            padding: 15px 0;
-            text-align: center;
-            margin-bottom: 10px;
-        }
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            border-bottom: 4px dashed #ffeb3b;
+            animation: fadeSlideIn 1s ease-out;
 
-        header h2 {
-            margin: 8px 0;
+            font-family: 'Jua', sans-serif;
         }
-
-        h1 {
-            text-align: center;
-            margin: 20px 0;
+        .header span {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .header a:first-child {
+            float: left;
+        }
+        .header a:last-child {
+            float: right;
         }
 
         .content-box {
-            background-color: #87CEEB;
+            background-color: white;
             border-radius: 15px;
             padding: 25px;
-            width: 65%;
-            height: 65vh;
+            width: 80%;
+            height:75vh;
             margin: 0 auto 25px;
             box-sizing: border-box;
             overflow: auto;
+
+            margin-top: 20px;
+            font-family: "Jua", sans-serif;
         }
 
         .nav-buttons {
             text-align: center;
-            margin-bottom: 25px;
             padding: 0 10%;
         }
 
         .button {
             display: inline-block;
             padding: 12px 30px;
-            margin: 0 25px;
             border-radius: 20px;
             text-decoration: none;
             color: white;
@@ -69,10 +78,12 @@
     </style>
 </head>
 <body>
-    <header>
-    </header>
+    <div class="header">
+        <a href="../Level 2.html" class="button home-btn">Level2</a>
+        <span>선택자 우선순위</span>
+        <a href="../Quiz/css_quiz1.html" class="button quiz-btn">테스트 시작</a>
+    </div>
 
-    <h1>선택자 우선순위</h1>
     <div class="content-box">
         <h3>우선순위 계산 규칙:</h3>
         <p>1. 인라인 스타일 (1000점)</p>
@@ -86,11 +97,6 @@
 li { color: green; }
         </pre>
         <p>!important > 인라인 스타일 > ID > 클래스 > 요소</p>
-    </div>
-
-    <div class="nav-buttons">
-        <a href="../Level 2.html" class="button home-btn">홈으로</a>
-        <a href="../Quiz/css_quiz1.html" class="button quiz-btn">테스트 시작</a>
     </div>
 </body>
 </html>
