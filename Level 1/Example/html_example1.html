@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>HTML 개념 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Level 1.css">
     <style>
         body {
+            padding-top: 0;
+        }
+
+        .header {
+            background-color: #4fc3f7;
+            color: white;
+            padding: 25px;
             margin: 0;
-            font-family: Arial, sans-serif;
-        }
+            
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            border-bottom: 4px dashed #ffeb3b;
+            animation: fadeSlideIn 1s ease-out;
 
-        header {
-            background-color: #87CEEB;
-            padding: 15px 0;
-            text-align: center;
-            margin-bottom: 10px;
+            font-family: 'Jua', sans-serif;
         }
-
-        header h2 {
-            margin: 8px 0;
+        .header span {
+            font-size: 40px;
+            font-weight: bold;
         }
-
-        h1 {
-            text-align: center;
-            margin: 20px 0;
+        .header a:first-child {
+            float: left;
+        }
+        .header a:last-child {
+            float: right;
         }
 
         .content-box {
-            background-color: #87CEEB;
+            background-color: white;
             border-radius: 15px;
             padding: 25px;
-            width: 65%;
-            height: 65vh;
+            width: 80%;
+            height:75vh;
             margin: 0 auto 25px;
             box-sizing: border-box;
             overflow: auto;
+
+            margin-top: 20px;
+            font-family: "Jua", sans-serif;
         }
 
         .nav-buttons {
             text-align: center;
-            margin-bottom: 25px;
             padding: 0 10%;
         }
 
         .button {
             display: inline-block;
             padding: 12px 30px;
-            margin: 0 25px;
             border-radius: 20px;
             text-decoration: none;
             color: white;
             font-weight: bold;
             transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .home-btn {
@@ -66,36 +76,37 @@
             opacity: 0.8;
             transform: translateY(-2px);
         }
+
     </style>
 </head>
+
 <body>
-    <header>
-    </header>
 
-    <h1>기본 문서 구조</h1>
-
-    <div class="content-box">
-        <h3>HTML 문서 필수 요소:</h3>
-        <p>1. &lt;!DOCTYPE html&gt; 문서 타입 선언</p>
-        <p>2. &lt;html&gt; 전체 페이지를 감싸는 루트 요소</p>
-        <p>3. &lt;head&gt; 메타데이터와 제목 포함</p>
-        <p>4. &lt;body&gt; 보이는 콘텐츠 포함</p>
-        <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;페이지 제목&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    페이지 내용
-&lt;/body&gt;
-&lt;/html&gt;
-        </pre>
-    </div>
-
-    <div class="nav-buttons">
-        <a href="../Level 1.html" class="button home-btn">홈으로</a>
+    <div class="header">
+        <a href="../Level 1.html" class="button home-btn">Level1</a>
+        <span>기본 문서 구조</span>
         <a href="../Quiz/html_quiz1.html" class="button quiz-btn">테스트 시작</a>
     </div>
+
+
+    <div class="content-box">
+        HTML은 Hyper Text Markup Language의 약어이다.
+        <br>
+        여기서 hypertext란 현재 페이지에서 다른 페이지로 이동할 수 있는 텍스트를 의미한다.
+        <br>
+        그리고 markup language는 문서의 구조를 정의하는 언어이다.
+        <br>
+        즉, HTML은 웹 페이지의 구조를 만드는 언어이다
+        <br><br>
+        HTML은 태그가 달린 요소(element)들로 이루어져 있다.
+        <br>
+        태그를 사용하여 요소를 만드는 방법은 다음과 같다.
+        <br>
+        &lt;태그명&gt;내용&lt/태그명&gt;
+        <br><br>
+        <img src="html/개념1_1.png" alt="hello" width="500px">
+
+    </div>
 </body>
+
 </html>
