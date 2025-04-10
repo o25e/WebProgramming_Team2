@@ -3,7 +3,10 @@ const hintText = document.querySelector("#hintText");
 const HIDDEN_CLASSNAME = "hidden";
 
 function showHint(){
-    hintText.classList.remove(HIDDEN_CLASSNAME);
+    if(hintText.classList.contains(HIDDEN_CLASSNAME))
+        hintText.classList.remove(HIDDEN_CLASSNAME);
+    else
+        hintText.classList.add(HIDDEN_CLASSNAME);
 }
 
 hintBtn.addEventListener("click", showHint);
