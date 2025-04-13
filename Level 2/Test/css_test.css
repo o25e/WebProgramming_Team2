@@ -39,7 +39,7 @@ body {
     border-radius: 10px;
     border-width: 3px;
 
-    width: 90%;
+    width: 95%;
     height: 500px;
 }
 
@@ -49,7 +49,7 @@ body {
     border-radius: 10px;
     border-width: 3px;
 
-    width: 90%;
+    width: 95%;
     height: 500px;
 
     font-family: 'Jua', sans-serif;
@@ -72,11 +72,6 @@ body {
 
 .left {
     float: left;
-    width: 50%;
-}
-
-.right {
-    float: right;
     width: 50%;
 }
 
@@ -148,28 +143,21 @@ body {
     color: white;
 }
 
-.pink {
-    background-color: pink;
+.btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
 }
 
-.pink:hover {
-    background-color: #ffc2cc80;
+.pink {
+    background-color: pink;
 }
 
 .orange {
     background-color: orange;
 }
 
-.orange:hover {
-    background-color: #ffa60088;
-}
-
 .mint {
     background-color: #1DCD9F;
-}
-
-.mint:hover {
-    background-color: #1dcd9e81;
 }
 
 .hidden {
@@ -181,7 +169,6 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-
     .left {
         width: 100%;
         /* The width is 100%, when the viewport is 800px or smaller */

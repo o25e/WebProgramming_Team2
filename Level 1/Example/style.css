@@ -1,0 +1,89 @@
+body {
+    padding-top: 0;
+}
+
+.header {
+    background-color: #4fc3f7;
+    color: white;
+    padding: 25px;
+    margin: 0;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    border-bottom: 4px dashed #ffeb3b;
+    animation: fadeSlideIn 1s ease-out;
+
+    font-family: 'Jua', sans-serif;
+}
+
+.header span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header a:first-child {
+    float: left;
+}
+
+.header a:last-child {
+    float: right;
+}
+
+.content-box {
+    white-space: pre-line;
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    width: 80%;
+    height: 75vh;
+    margin: 0 auto 25px;
+    box-sizing: border-box;
+    overflow: auto;
+
+    margin-top: 20px;
+    font-family: "Jua", sans-serif;
+}
+
+.nav-buttons {
+    text-align: center;
+    padding: 0 10%;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.home-btn {
+    background-color: #FFA500;
+}
+
+.quiz-btn {
+    background-color: #008000;
+}
+
+.button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.codebox {
+    margin: auto;
+    width: 80%;
+    padding: 10px 10px;
+    text-align: left;
+    overflow: auto;
+    background-color: #eee;
+    border-radius: 10px;
+}

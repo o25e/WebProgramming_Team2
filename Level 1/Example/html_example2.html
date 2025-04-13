@@ -6,88 +6,68 @@
     <title>HTML 개념 페이지</title>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Level 1.css">
-    <style>
-        body {
-            padding-top: 0;
-        }
-
-        .header {
-            background-color: #4fc3f7;
-            color: white;
-            padding: 25px;
-            margin: 0;
-            
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-            border-bottom: 4px dashed #ffeb3b;
-            animation: fadeSlideIn 1s ease-out;
-
-            font-family: 'Jua', sans-serif;
-        }
-        .header span {
-            font-size: 40px;
-            font-weight: bold;
-        }
-        .header a:first-child {
-            float: left;
-        }
-        .header a:last-child {
-            float: right;
-        }
-
-        .content-box {
-            background-color: white;
-            border-radius: 15px;
-            padding: 25px;
-            width: 80%;
-            height:75vh;
-            margin: 0 auto 25px;
-            box-sizing: border-box;
-            overflow: auto;
-
-            margin-top: 20px;
-            font-family: "Jua", sans-serif;
-        }
-
-        .nav-buttons {
-            text-align: center;
-            padding: 0 10%;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .home-btn {
-            background-color: #FFA500;
-        }
-
-        .quiz-btn {
-            background-color: #008000;
-        }
-
-        .button:hover {
-            opacity: 0.8;
-            transform: translateY(-2px);
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="header">
+    <div class="header clearfix">
         <a href="../Level 1.html" class="button home-btn">Level1</a>
-        <span>2장</span>
+        <span>2장 제목 글자 태그와 본문 글자 태그</span>
         <a href="../Quiz/html_quiz2.html" class="button quiz-btn">테스트 시작</a>
     </div>
 
     <div class="content-box">
+        HTML의 기본 태그들을 알아보자.
+        기본 태그에는 크게 네가지가 있다.
+        1. 글자 태그
+        2. 목록 태그
+        3. 테이블 태그
+        4. 미디어 태그
+        이번 장에서는 글자 태그의 제목 글자 태그와 본문 글자 태그를 알아본다.
+
+        제목 글자 태그에는 h1~h6 태그가 있다. h는 heading을 의미한다.
+        h 태그는 제목 글자를 나타내고 1에서 6으로 갈 수록 글자 크기가 작아진다.
+        쓰는 방법은 다음과 같다.
+        <pre class="codebox">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;html header&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;h1&lt;/h1&gt;
+        &lt;h2&gt;h2&lt;/h2&gt;
+        &lt;h3&gt;h3&lt;/h3&gt;
+        &lt;h4&gt;h4&lt;/h4&gt;
+        &lt;h5&gt;h5&lt;/h6&gt;
+        &lt;h6&gt;h6&lt;/h6&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+        <img src="src/2-1.png" alt="attribute" width="500px">
+        본문 글자 태그를 알아보자.
+        본문 글자 태그에는 p, hr, br 이 있다.
+        p는 paragraph로 문단을 만드는 태그이다.
+        hr은 horizontal로 수평선을 그린다.
+        br은 break로 줄바꿈을 한다. 엔터같은 역할이다.
+        hr과 br은 태그 하나만 있는 void element이다.
+        사용방법은 다음 예시와 같다.
+        <pre class="codebox">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;html paragraph&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;hello paragraph!&lt;/p&gt;
+        &lt;hr&gt;
+        &lt;p&gt;
+            Wow!
+            &lt;br&gt;
+            Amazing! 
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+        <img src="src/2-2.png" alt="attribute" width="500px">
         
     </div>
 </body>
