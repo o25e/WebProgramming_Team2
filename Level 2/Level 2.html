@@ -25,6 +25,29 @@
         <div class="progress-bar" id="progress-bar"></div>
     </div>
 
+    <!-- 레벨업 계산기 -->
+    <div class="levelup-box">
+        <p id="levelup-text">웹마스터까지 남은 진행률: <span id="levelup-percent">100%</span></p>
+    </div>
+
+    <!-- 레벨 시스템 -->
+    <div class="level-status-box" id="levelStatusBox">
+        <button class="toggle-btn" onclick="toggleLevelBox()" id="toggleBtn">접기 ⬆</button>
+        <h2>📊 내 레벨 상태</h2>
+        <div class="level-info-line">
+            <span class="label">현재 레벨</span>
+            <span id="current-level">1</span>
+        </div>
+        <div class="level-info-line">
+            <span class="label">칭호</span>
+            <span id="level-title">🐣 웹 새싹</span>
+        </div>
+        <div class="level-info-line">
+            <span class="label">다음 레벨까지 남은 예제</span>
+            <span id="remaining-examples">10</span>
+        </div>
+    </div>
+
     <div class="container">
         <div class="study-box" onclick="openStudy(1)" id="box1"><img src="css_image1.png" alt="예제 1"></div>
         <div class="study-box" onclick="openStudy(2)" id="box2"><img src="css_image2.png" alt="예제 2"></div>
@@ -36,11 +59,6 @@
         <div class="study-box" onclick="openStudy(8)" id="box8"><img src="css_image8.png" alt="예제 8"></div>
         <div class="study-box" onclick="openStudy(9)" id="box9"><img src="css_image9.png" alt="예제 9"></div>
         <div class="study-box completed" onclick="openStudy(10)" id="box10"><img src="image10.png" alt="예제 10"></div>
-    </div>
-
-    <div class="nav-buttons">
-        <button onclick="prevPage()">이전</button>
-        <button onclick="nextPage()">다음</button>
     </div>
 
     <footer>
@@ -71,18 +89,41 @@
                     document.getElementById(`box${i}`).classList.add('completed');
                 }
             }
+
             const progressPercentage = (completedStudies / 10) * 100;
             progressBar.style.width = `${progressPercentage}%`;
+
+            const totalExamples = 10;
+            let completed = 4; // 예시: 4개 완료했다고 가정
+
+            const remaining = totalExamples - completed;
+            const levelInfo = [
+                { level: 1, title: "🐣 웹 새싹" },
+                { level: 2, title: "🛠️ 웹 도전자" },
+                { level: 3, title: "👑 웹 마스터" },
+            ];
+
+            let currentLevel = 1;
+            if (completed >= 10) currentLevel = 2;
+            if (completed >= 20) currentLevel = 3;
+
+            document.getElementById("current-level").innerText = currentLevel;
+            document.getElementById("level-title").innerText = levelInfo[currentLevel - 1].title;
+            document.getElementById("remaining-examples").innerText = totalExamples - completed;
         }
 
-        // 이전 페이지 버튼 클릭시
-        function prevPage() {
-            alert("이전 페이지로 이동합니다.");
-        }
+        // 프로필 접기/펼치기 기능
+        function toggleLevelBox() {
+            const box = document.getElementById("levelStatusBox");
+            const button = document.getElementById("toggleBtn");
 
-        // 다음 페이지 버튼 클릭시
-        function nextPage() {
-            alert("다음 페이지로 이동합니다.");
+            box.classList.toggle("collapsed");
+
+            if (box.classList.contains("collapsed")) {
+                button.textContent = "펼치기 ⬇";
+            } else {
+                button.textContent = "접기 ⬆";
+            }
         }
     </script>
 </body>
