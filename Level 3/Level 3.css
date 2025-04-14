@@ -9,7 +9,6 @@ body {
     color: #333;
 }
 
-
 /* 헤더 */
 h1 {
     background-color: #74d582;
@@ -67,6 +66,120 @@ h1 {
 .level-nav a.active {
     background-color: #4fc3f7;
     color: #fff;
+}
+
+/* 레벨업 계산기 */
+.levelup-box {
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #007acc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 30px auto;
+    max-width: 500px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.levelup-box h2 {
+    color: #007acc;
+    margin-bottom: 10px;
+}
+
+#levelup-percent {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* 프로필 카드 (레벨 시스템) */
+.level-status-box {
+    position: fixed;
+    top: 90px; /* 헤더 아래에 오도록 */
+    right: 20px; /* 우측 여백 */
+    background: linear-gradient(135deg, #e1f5fe, #ffffff);
+    border: 2px solid #00bcd4;
+    border-radius: 16px;
+    padding: 16px 20px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.2);
+    z-index: 1000;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.level-status-box:hover {
+    transform: scale(1.02);
+}
+
+.level-status-box h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #0288d1;
+    font-weight: 700;
+}
+
+.level-info-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.level-info-line span {
+    font-weight: 600;
+    color: #333;
+}
+
+.level-info-line .label {
+    color: #0288d1;
+    font-weight: bold;
+    text-align: left;
+    flex: 1;
+}
+
+#current-level {
+    color: #007acc;
+    font-size: 1.6em;
+}
+
+#level-title {
+    color: #e67e22;
+    font-size: 1.2em;
+}
+
+#remaining-examples {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+/* 레벨 프로필 토글 버튼 css 추가 */
+.toggle-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    color: #007acc;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #e0f7fa;
+}
+
+.level-status-box.collapsed {
+    height: 40px;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+
+.level-status-box.collapsed h2,
+.level-status-box.collapsed .level-info-line {
+    display: none;
 }
 
 /* 학습 상자 */
