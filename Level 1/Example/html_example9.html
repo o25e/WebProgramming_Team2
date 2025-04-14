@@ -12,12 +12,117 @@
 <body>
     <div class="header clearfix">
         <a href="../Level 1.html" class="button home-btn">Level1</a>
-        <span>9장</span>
+        <span>9장 입력 양식 태그2</span>
         <a href="../Quiz/html_quiz9.html" class="button quiz-btn">테스트 시작</a>
     </div>
 
     <div class="content-box">
+        이번 장에서는 textarea 태그와 선택 태그, 입력양식 그룹 태그에 대해 알아본다.
+        <img src="src/9-1.png" alt="form type1" width="550px">
+        <img src="src/9-2.png" alt="form type2" width="550px">
+        textarea는 여러 줄의 글자를 입력할 수 있는 영역을 만든다.
+        cols 속성은 한 행에 입력할 수 있는 글자 수이고
+        row 속성은 몇 행인지를 나타낸다.
+        <pre class="codebox">
+    &lt;!--입력 양식 태그2--&gt;
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    
+    &lt;head&gt;
+        &lt;title&gt;입력 양식 태그2&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;textarea cols="80" rows="10"&gt;&lt;/textarea&gt;
         
+    &lt;/body&gt;
+    
+    &lt;/html&gt;</pre>
+        <img src="src/9-3.png" alt="textarea" width="550px">
+
+        select 태그에 대해 알아보자.
+        select 태그는 선택 양식을 만든다.
+        select 태그 내부에 option 태그를 넣는다.
+        option 태그는 옵션을 생성한다.
+        <pre class="codebox">
+&lt;!--입력 양식 태그2--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;입력 양식 태그2&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;br&gt;
+    &lt;select&gt;
+        &lt;option&gt;김밥&lt;/option&gt;
+        &lt;option&gt;떡볶이&lt;/option&gt;
+        &lt;option&gt;순대&lt;/option&gt;
+        &lt;option&gt;어묵&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;select multiple&gt;
+        &lt;option&gt;김밥&lt;/option&gt;
+        &lt;option&gt;떡볶이&lt;/option&gt;
+        &lt;option&gt;순대&lt;/option&gt;
+        &lt;option&gt;어묵&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;select&gt;
+        &lt;optgroup label="쌀"&gt;
+            &lt;option&gt;김밥&lt;/option&gt;
+            &lt;option&gt;떡볶이&lt;/option&gt;
+        &lt;/optgroup&gt;
+        &lt;optgroup label="쌀X"&gt;
+            &lt;option&gt;순대&lt;/option&gt;
+            &lt;option&gt;어묵&lt;/option&gt;
+        &lt;/optgroup&gt;
+    &lt;/select&gt;
+    &lt;br&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+        <img src="src/9-4.png" alt="select">
+        <img src="src/9-5.png" alt="select multiple">
+        <img src="src/9-6.png" alt="select optgroup">
+        select에 multiple 속성을 넣으면 여러개를 선택할 수 있다.
+        그리고 option들을 optgroup으로 묶어서 옵션들을 그룹화할 수 있다.
+
+        다음으로 관련된 입력양식들을 하나로 묶는 방법을 알아보자.
+        fieldset 태그로 감싸면 외곽선을 만든다.
+        그리고 fieldset 태그 안에 legend 태그를 만들어서 그룹의 이름을 표시할 수 있다.
+        <pre class="codebox">
+&lt;!--입력 양식 태그2--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;입력 양식 태그2&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    
+&lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;입력 양식&lt;/legend&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;label for="name"&gt;이름&lt;/label&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input id="naem" type="text"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;label for="mail"&gt;이메일&lt;/label&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input id="mail" type="email"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;input type="submit"&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+        <img src="src/9-7.png" alt="fieldset" width="550px">
     </div>
 </body>
 

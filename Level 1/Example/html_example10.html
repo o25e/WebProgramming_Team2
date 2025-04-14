@@ -12,12 +12,89 @@
 <body>
     <div class="header clearfix">
         <a href="../Level 1.html" class="button home-btn">Level1</a>
-        <span>10장</span>
+        <span>10장 문서 구조화</span>
         <a href="../Quiz/html_quiz10.html" class="button quiz-btn">테스트 시작</a>
     </div>
 
     <div class="content-box">
-        
+        html의 요소의 구조에는 블록(block) 형식과 인라인(inline) 형식이라는 것이 있다.
+        블록 요소는 한 줄을 전부 차지해서 옆에 다른 요소가 놓일 수 없다.
+        인라인 요소는 자신의 글자 크기만큼만 영역을 차지한다. 그리고 왼쪽에서 오른쪽으로 쌓인다.
+
+        div와 span이라는 공간 분할 태그를 알아보자.
+        div는 블록 형식으로 공간을 분할하고 span은 인라인 형식으로 공간을 분할한다.
+        <pre class="codebox">
+&lt;!--공간 분할 태그--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;div와 span&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div&gt;
+        안녕, 난 div!
+    &lt;/div&gt;
+    &lt;span&gt;안녕, 난 span!&lt;/span&gt;
+    &lt;span&gt;나도 span!&lt;/span&gt;
+    &lt;span&gt;나도 span이야!&lt;/span&gt;
+    &lt;div&gt;난 div인데 span 옆에 갈 수 없어 ㅠㅠ&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+        <img src="src/10-1.png" alt="div span">
+
+        시맨틱 태그는 특정 태그에 의미를 부여한다. 문서를 구조화할 때 사용한다.
+        <img src="src/10-2.png" alt="semantic" width="550px">
+        태그 종류와 구조는 위 그림과 같다.
+        아래 예시를 살펴보자.
+        <pre class="codebox">
+&lt;!--시맨틱 태그--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;시맨틱&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;!--시맨틱 태그--&gt;
+    &lt;header&gt;
+        &lt;h1&gt;HTML5 기본&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;메뉴-1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;메뉴-2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;메뉴-3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;section&gt;
+        &lt;article&gt;
+            &lt;h1&gt;A&lt;/h1&gt;
+            &lt;p&gt;aaaaaaaaaaaaaaaaaaaa&lt;/p&gt;
+        &lt;/article&gt;
+        &lt;article&gt;
+            &lt;h1&gt;B&lt;/h1&gt;
+            &lt;p&gt;bbbbbbbbbbbbbbbbbbbb&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;aside&gt;
+        &lt;h1&gt;Tip&lt;/h1&gt;
+        &lt;p&gt;tttttttttt&lt;/p&gt;
+    &lt;/aside&gt;
+
+    &lt;footer&gt;
+        &lt;address&gt;서울&lt;/address&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+        <img src="src/10-3.png" alt="semantic ex" width="500px">
+        위와 같이 시멘틱 태그를 넣으면 알아보기 쉽고 AI도 더 잘 알아본다.
     </div>
 </body>
 
