@@ -1,0 +1,87 @@
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-image: linear-gradient(to bottom, #71bffb,white);
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height:100%;
+    margin:0;
+}
+
+.title{
+    font-family: "Jua", sans-serif;
+    color: white; 
+    -webkit-text-stroke: 1px rgb(72, 151, 242); 
+    text-shadow: 2px 2px 4px rgb(72, 150, 181);
+    margin-top: 0px;
+    font-size: 100px;
+    text-align: center;
+}
+.explanation {
+    font-family: "Jua", sans-serif;
+    color: white; 
+    -webkit-text-stroke: 1px rgb(181, 215, 255); 
+    text-shadow: 2px 2px 4px rgb(72, 150, 181);
+    margin-top:670px;
+    font-size: 36px; 
+    text-align: center;
+}
+  
+.html_cloud{
+    font-family: "Jua", sans-serif;
+    position: absolute;
+    top: 300px;
+    right: 150px;
+    width: 450px; 
+    height: auto;
+}
+
+.css_cloud{
+    font-family: "Jua", sans-serif;
+    position: absolute;
+    top: 500px;
+    left: 120px;
+    width: 450px; 
+    height: auto;
+}
+.train_green{
+    position: absolute;
+    top: 1420px;
+    left: 10px;
+    width: 330px; 
+    height: auto;
+}
+.level1{
+    position: absolute;
+    top: 1500px;
+    left: 380px;
+    width: 330px; 
+    height: auto;
+}
+.level2{
+    position: absolute;
+    top: 1500px;
+    left: 765px;
+    width: 330px; 
+    height: auto;
+}
+.level3{
+    position: absolute;
+    top: 1500px;
+    left: 1170px;
+    width: 330px; 
+    height: auto;
+}
+.skeleton{
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    width: 300px; 
+    height: auto;
+}
+
+
+

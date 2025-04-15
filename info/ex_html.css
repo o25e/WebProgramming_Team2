@@ -1,0 +1,114 @@
+body {    
+    font-family: "Jua", 'Noto Sans KR', sans-serif;
+    text-align: center;
+    background-color: #f8f6c7; 
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    color: #333;
+}
+.topmenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #f8f6c7;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px 0;
+    border-bottom: 3          px dashed #ffeb3b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.topmenu a{
+    color: #333;
+    background-color: #fffbe7;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.topmenu a:hover {
+    background-color: #a5a5a5;
+    color: #333;
+}
+
+.topmenu a.active {
+    background-color: #fffbe7;
+    color: #fff;
+}
+h1 {
+    background-color: #fef0a8;
+    color: #333;
+    padding: 25px;
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: 4px dashed #ffeb3b;
+    animation: fadeSlideIn 1s ease-out;
+}
+
+@keyframes fadeSlideIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #fffbe7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  .html{
+    font-size:30px;
+  }
+  .bigcode {
+    background-color: #A07000;
+    color: #ffffff;
+    padding: 15px;
+    white-space: pre-line;
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .bigcode p {
+    font-size:20px;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+  }
+  
+  .smallcode {
+    background-color: #72BA6A;
+    color: #000000;
+    padding: 15px;
+    white-space: pre-line;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 0.8;
+    display: flex;
+    align-items: flex-start;
+    gap: 170px; 
+
+    flex-wrap: wrap;
+  }
+  
+  .skeleton {
+    width: 25%;
+    min-width: 100px;
+    max-width: 1000px;
+    margin-top: 50px;
+    flex-shrink: 0;
+  }
+  
+  .skeleton img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  

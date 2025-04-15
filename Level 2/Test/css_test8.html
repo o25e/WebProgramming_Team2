@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 화면</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Level 2.css">
+    <link rel="stylesheet" href="css_test.css">
+</head>
+
+<body>
+    <div class="header">
+        <a class="btn orange" href="../Quiz/css_quiz1.html">← Back</a>
+        <span>실습</span>
+        <a class="btn mint" href="../Level 2.html">🏠︎ Home</a>
+    </div>
+    <div id="text">
+        <p id="instruction" style="margin: 10px auto;">
+            아래 화면과 같이 만들어보세요!
+            <button type="button" id="hintBtn" class="btn pink" style="margin-left: 10px;">💡 힌트</button>
+        </p>
+        <div style="text-align: center; margin-top: 20px;">
+            <span id="hintText" class="hidden">:hover는 마우스를 올렸을 때 스타일을 바꿔줘요!</span>
+        </div>
+    </div>
+
+    <img id="target" class="small-img" src="cssimage\8.png" alt="target webpage image">
+
+    <div id="work" class="wrapWindow">
+        <div id="output" class="left">
+            <h3>실행 결과</h3>
+            <iframe id="outputFrame" frameborder="0"></iframe>
+        </div>
+        <div id="editor" class="left">
+            <h3 class="">HTML</h3>
+            <h3 class="hidden">CSS</h3>
+            <div class="code">
+                <div class="tabs">
+                    <button class="tab-btn active">HTML</button><button class="tab-btn">CSS</button>
+                </div>
+                <textarea id="htmlCode" class="" oninput="updateOutput()" placeholder="HTML 코드를 작성하세요!"></textarea>
+                <textarea id="cssCode" class="hidden" oninput="updateOutput()" placeholder="CSS 코드를 작성하세요!"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="iframe.js"></script>
+    <script src="hint.js"></script>
+    <script src="tabs.js"></script>
+    <script src="tabkey.js"></script>
+</body>
+
+</html>

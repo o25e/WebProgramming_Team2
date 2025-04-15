@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS 스터디</title>
+    <link rel="stylesheet" href="Level 2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed-header">
+        <h1>Level 2</h1>
+        
+        <!-- 메뉴바 추가 -->
+        <nav class="level-nav">
+            <a href="../home.html">홈</a>
+            <a href="../Level 1/Level 1.html">Level 1</a>
+            <a href="../Level 2/Level 2.html" class="active">Level 2</a>
+            <a href="../Level 3/Level 3.html">Level 3</a>
+            <a href="../Calculator/calculator.html">Calculator</a>
+        </nav>
+    </header>
+
+    <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div class="container">
+        <div class="study-box" onclick="openStudy(1)" id="box1"><img src="css_image1.png" alt="예제 1"></div>
+        <div class="study-box" onclick="openStudy(2)" id="box2"><img src="css_image2.png" alt="예제 2"></div>
+        <div class="study-box" onclick="openStudy(3)" id="box3"><img src="css_image3.png" alt="예제 3"></div>
+        <div class="study-box" onclick="openStudy(4)" id="box4"><img src="css_image4.png" alt="예제 4"></div>
+        <div class="study-box" onclick="openStudy(5)" id="box5"><img src="css_image5.png" alt="예제 5"></div>
+        <div class="study-box" onclick="openStudy(6)" id="box6"><img src="css_image6.png" alt="예제 6"></div>
+        <div class="study-box" onclick="openStudy(7)" id="box7"><img src="css_image7.png" alt="예제 7"></div>
+        <div class="study-box" onclick="openStudy(8)" id="box8"><img src="css_image8.png" alt="예제 8"></div>
+        <div class="study-box" onclick="openStudy(9)" id="box9"><img src="css_image9.png" alt="예제 9"></div>
+        <div class="study-box completed" onclick="openStudy(10)" id="box10"><img src="image10.png" alt="예제 10"></div>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prevPage()">이전</button>
+        <button onclick="nextPage()">다음</button>
+    </div>
+
+    <footer>
+        <p>© 2025 HTML & CSS Study | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // 각 스터디 박스를 클릭했을 때 해당 학습 페이지로 이동
+        function openStudy(id) {
+            window.open(`./Example/css_example${id}.html`, '_blank');
+            checkCompletion(id);
+        }
+
+        // 홈 페이지에서 진행도 업데이트 로직 추가
+        document.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem('returningFromQuiz') === 'true') {
+                localStorage.removeItem('returningFromQuiz');
+                updateProgress();
+            }
+        });
+
+        function updateProgress() {
+            const progressBar = document.getElementById('progress-bar');
+            let completedStudies = 0;
+            for (let i = 1; i <= 10; i++) {
+                if (localStorage.getItem(`quizCompleted${i}`) === 'true') {
+                    completedStudies++;
+                    document.getElementById(`box${i}`).classList.add('completed');
+                }
+            }
+            const progressPercentage = (completedStudies / 10) * 100;
+            progressBar.style.width = `${progressPercentage}%`;
+        }
+
+        // 이전 페이지 버튼 클릭시
+        function prevPage() {
+            alert("이전 페이지로 이동합니다.");
+        }
+
+        // 다음 페이지 버튼 클릭시
+        function nextPage() {
+            alert("다음 페이지로 이동합니다.");
+        }
+    </script>
+</body>
+</html>

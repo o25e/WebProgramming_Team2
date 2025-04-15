@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 개념 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Level 2.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header clearfix">
+        <a href="../Level 2.html" class="button home-btn">Level2</a>
+        <span>태그 선택자와 배경 색상 지정</span>
+        <a href="../Quiz/css_quiz1.html" class="button quiz-btn">테스트 시작</a>
+    </div>
+
+    <div class="content-box">
+        <h2>태그 선택자란?</h2>
+        <p>
+          태그 선택자는 특정 HTML 태그에만 스타일을 적용할 수 있게 해주는 선택자이다.
+          예를 들어 p 태그에만 글자색을 바꾸고 싶다면 p { color: red; } 이렇게 쓸 수 있다.
+          이 방식은 특정 태그를 일괄적으로 꾸미고 싶을 때 가장 기본적으로 많이 사용된다.
+        </p>
+      
+        <pre class ="codebox"><code>p {
+        color: blue;
+      }
+      
+h1 {
+        font-size: 30px;
+        font-weight: bold;
+      }</code></pre>
+      
+        <h2>선택자 여러 개에 같은 스타일 적용하기</h2>
+        <p>
+          만약 h1과 h2 모두 같은 글자 색을 적용하고 싶다면,
+          선택자 사이에 쉼표(<code>,</code>)를 넣으면 된다.
+          이 방법은 중복을 줄이고 코드를 간결하게 만들어준다.
+        </p>
+      
+        <pre class ="codebox"><code>h1, h2 {
+        color: darkgreen;
+      }</code></pre>
+      
+        <h2>배경 색상 설정하기</h2>
+        <p>
+          background-color 속성은 요소의 배경색을 지정할 때 사용한다.
+          글자색을 지정할 때처럼 색 이름, 16진수, RGB 방식 모두 사용할 수 있다.
+        </p>
+      
+        <pre class ="codebox"><code>p {
+        background-color: yellow;
+      }
+      
+h1 {
+        background-color: #ffcc00;
+      }
+      
+h2 {
+        background-color: rgb(200, 200, 255);
+      }</code></pre>
+      
+        <p>배경색은 눈에 띄는 강조를 주거나, 구역을 시각적으로 구분할 때 자주 쓰인다.</p>
+      
+</body>
+</html>
