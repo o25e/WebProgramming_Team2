@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 개념 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Level 1.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header clearfix">
+        <a href="../Level 1.html" class="button home-btn">Level1</a>
+        <span>3장 앵커 태그</span>
+        <a href="../Quiz/html_quiz3.html" class="button quiz-btn">테스트 시작</a>
+    </div>
+
+    <div class="content-box">
+        이번 장에서는 글자 태그 중 하나인 앵커 태그를 알아보자.
+        앵커 태그는 a 태그라고도 하며 글자에 하이퍼링크를 달아주는 역할을 한다.
+        다음과 같이 생겼다.
+        <img src="src/3-1.png" alt="href attribute" width="500px">
+        하이퍼링크를 달기 위해서는 href 속성에 이동할 경로를 입력한다.
+        경로에는 4가지가 있는데 다음과 같다.
+
+        <strong>절대 경로</strong>
+        절대 경로는 기준이 최상위 위치로 정해져 있다.
+        예시로 네이버 메인 페이지가 있다. http://naver.com
+        절대 경로에서 /animal.jpg는 현재 웹 사이트 최상위 위치의 animal.jpg 파일을 뜻한다.
+
+        <strong>상대 경로</strong>
+        상대 경로는 현재 웹 페이지를 기준으로한다. 사용 예시는 다음과 같다.
+        animal.jpg는 웹 페이지가 있는 폴더의 animal.jpg 파일이다.
+        image/animal.jpg는 웹 페이지가 있는 폴더에 포함된 image 폴더의 animal.jpg 파일이다.
+        ../animal.jpg는 웹 페이지가 있는 폴더의 상위 폴더에 있는 animal.jpg 파일이다.
+
+        <strong>아이디 경로</strong>
+        여기서 아이디(id)란 태그에 다는 속성 중 하나이다. id 속성을 사용하면 태그에 원하는 id를 지어줄 수 있다.
+        아이디 경로는 아이디 앞에 ‘#’을 붙여 작성한다. 예시는 다음과 같다.
+        #name는 id 속성이 name인 태그의 위치로 이동시켜준다. 즉, 문서 내부에서도 이동할 수 있다.
+
+        <strong>메일경로</strong>
+        mailto:hanb@hanbit.co.kr은 해당 주소로 메일을 전송해준다.
+
+        예제를 살펴보자.
+        다음은 절대경로 앵커태그 예시이다.
+        <pre class="codebox">
+&lt;!--절대경로로 웹페이지 연결하기--&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;anchor&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href="http://www.hanbit.co.kr"&gt;한빛미디어&lt;/a&gt;
+        &lt;br&gt;
+        &lt;a href="http://www.naver.com/"&gt;네이버&lt;/a&gt;
+        &lt;br&gt;
+        &lt;a href="http://www.daum.com/"&gt;다음&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+        <img src="src/3-2.png" alt="absolute path">
+
+        다음은 아이디 경로 예시이다.
+        <pre class="codebox">
+&lt;!--아이디경로로 내부에 연결하기--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;anchor&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href="#alpha"&gt;alpha 부분&lt;/a&gt;
+        &lt;a href="#beta"&gt;beta 부분&lt;/a&gt;
+        &lt;hr&gt;
+        &lt;h1 id="alpha"&gt;Alpha&lt;/h1&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;h1 id="beta"&gt;Beta&lt;/h1&gt;
+        &lt;p&gt;Vivamus elementum pretium tortor, in tincidunt mauris gravida et.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+        <img src="src/3-3.png" alt="id path">
+        위 예시는 문서가 짧아 하이퍼링크를 클릭해도 이동효과가 나타나지 않지만 긴 문서에서는 제대로 이동한다.
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+body {
+    font-family: 'Jua', sans-serif;
+    margin: 0;
+    padding-top: 0;
+}
+
+#text {
+    margin-bottom: 20px;
+}
+
+#instruction {
+    margin: 10px;
+    text-align: center;
+}
+
+#target {
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 3px;
+
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#work {
+    overflow: hidden;
+}
+
+#work h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+}
+#output iframe {
+    border-color: lightgray;
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+
+    width: 95%;
+    height: 500px;
+}
+
+#htmlCode, #cssCode {
+    border-color: lightgray;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+
+    width: 95%;
+    height: 500px;
+
+    font-family: 'Jua', sans-serif;
+    font-size: 18px;
+}
+
+#hintText {
+    background-color: aquamarine;
+    border-radius: 10px;
+
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.wrapWindow::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.left {
+    float: left;
+    width: 50%;
+}
+
+.header {
+    background-color: #4fc3f7;
+    color: white;
+    padding: 25px;
+    margin: 0;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    border-bottom: 4px dashed #ffeb3b;
+    animation: fadeSlideIn 1s ease-out;
+
+    font-family: 'Jua', sans-serif;
+}
+
+.header span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header a:first-child {
+    float: left;
+}
+
+.header a:last-child {
+    float: right;
+}
+
+.code {
+    position: relative;
+}
+
+.tabs {
+    position: absolute;
+    top: -19px;
+    left: 5.5%;
+}
+.tab-btn {
+    font-family: 'Jua', sans-serif;
+    margin: 0;
+    cursor: pointer;
+    background-color: #999;
+    border-color: lightgray;
+    border-bottom: none;
+}
+.tab-btn:first-child {
+    border-radius: 5px 0 0 0;
+}
+.tab-btn:last-child {
+    border-radius: 0px 5px 0 0;
+}
+.tab-btn.active {
+    background-color: white;
+    border-bottom: 3px solid white;
+}
+.btn {
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    overflow: hidden;
+    text-align: center;
+
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.pink {
+    background-color: pink;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.mint {
+    background-color: #1DCD9F;
+}
+
+.hidden {
+    display: none;
+}
+
+.small-img {
+    transform: scale(0.9);
+}
+
+@media screen and (max-width: 800px) {
+    .left {
+        width: 100%;
+        /* The width is 100%, when the viewport is 800px or smaller */
+    }
+
+    #output iframe, #cssCode, #htmlCode {
+        height: 300px;
+    }
+}

@@ -8,4 +8,8 @@ function updateOutput() {
     iframe.close();
 }
 
+<<<<<<< HEAD
 window.onload = updateOutput;
+=======
+window.onload = updateOutput; //이벤트 리스너
+>>>>>>> 3784881ae693863ab303265978838b2e5808a3cb

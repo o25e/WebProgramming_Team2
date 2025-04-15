@@ -48,23 +48,17 @@
         </div>
     </div>
     
-    
     <div class="container">
-        <div class="study-box" onclick="openStudy(1)" id="box1"><img src="html_image1.png" alt="예제 1"></div>
-        <div class="study-box" onclick="openStudy(2)" id="box2"><img src="html_image2.png" alt="예제 2"></div>
-        <div class="study-box" onclick="openStudy(3)" id="box3"><img src="html_image3.png" alt="예제 3"></div>
-        <div class="study-box" onclick="openStudy(4)" id="box4"><img src="html_image4.png" alt="예제 4"></div>
-        <div class="study-box" onclick="openStudy(5)" id="box5"><img src="html_image5.png" alt="예제 5"></div>
-        <div class="study-box" onclick="openStudy(6)" id="box6"><img src="html_image6.png" alt="예제 6"></div>
-        <div class="study-box" onclick="openStudy(7)" id="box7"><img src="html_image7.png" alt="예제 7"></div>
-        <div class="study-box" onclick="openStudy(8)" id="box8"><img src="html_image8.png" alt="예제 8"></div>
-        <div class="study-box" onclick="openStudy(9)" id="box9"><img src="html_image9.png" alt="예제 9"></div>
-        <div class="study-box completed" onclick="openStudy(10)" id="box10"><img src="image10.png" alt="예제 10"></div>
-    </div>
-
-    <div class="nav-buttons">
-        <button onclick="prevPage()">이전</button>
-        <button onclick="nextPage()">다음</button>
+        <div class="study-box" onclick="openStudy(1)" id="box1"><img src="Test/src/1.png" alt="예제 1"></div>
+        <div class="study-box" onclick="openStudy(2)" id="box2"><img src="Test/src/2.png" alt="예제 2"></div>
+        <div class="study-box" onclick="openStudy(3)" id="box3"><img src="Test/src/3.png" alt="예제 3"></div>
+        <div class="study-box" onclick="openStudy(4)" id="box4"><img src="Test/src/4.png" alt="예제 4"></div>
+        <div class="study-box" onclick="openStudy(5)" id="box5"><img src="Test/src/5.png" alt="예제 5"></div>
+        <div class="study-box" onclick="openStudy(6)" id="box6"><img src="Test/src/6.png" alt="예제 6"></div>
+        <div class="study-box" onclick="openStudy(7)" id="box7"><img src="Test/src/7.png" alt="예제 7"></div>
+        <div class="study-box" onclick="openStudy(8)" id="box8"><img src="Test/src/8.png" alt="예제 8"></div>
+        <div class="study-box" onclick="openStudy(9)" id="box9"><img src="Test/src/9.png" alt="예제 9"></div>
+        <div class="study-box completed" onclick="openStudy(10)" id="box10"><img src="Test/src/10.png" alt="예제 10"></div>
     </div>
 
     <footer>
@@ -107,14 +101,12 @@
             const levelInfo = [
                 { level: 1, title: "🐣 웹 새싹" },
                 { level: 2, title: "🛠️ 웹 도전자" },
-                { level: 3, title: "⚡ 웹 마스터" },
-                { level: 4, title: "👑 궁극의 웹마스터" }
+                { level: 3, title: "👑 웹 마스터" },
             ];
 
             let currentLevel = 1;
             if (completed >= 10) currentLevel = 2;
             if (completed >= 20) currentLevel = 3;
-            if (completed >= 30) currentLevel = 4;
 
             document.getElementById("current-level").innerText = currentLevel;
             document.getElementById("level-title").innerText = levelInfo[currentLevel - 1].title;
@@ -133,17 +125,6 @@
             } else {
                 button.textContent = "접기 ⬆";
             }
-        }
-
-
-        // 이전 페이지 버튼 클릭시
-        function prevPage() {
-            alert("이전 페이지로 이동합니다.");
-        }
-
-        // 다음 페이지 버튼 클릭시
-        function nextPage() {
-            alert("다음 페이지로 이동합니다.");
         }
     </script>
 </body>
