@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML 퀴즈</title>
+
+    <style>
+        .question-image {
+            max-width: 300px;
+            display: block;
+            margin: 15px auto;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+    </style>
+
     <style>
         body {
             margin: 0;
@@ -138,16 +149,18 @@
 <body>
     <header></header>
 
-    <h1>HTML 퀴즈</h1>
+    <h1>9장 HTML 퀴즈</h1>
 
     <div class="quiz-container">
         <div class="question-box">
-            <h2>문제: 9장 관련 내용 필요</h2>
+            <h2>문제: 다음 그림을 만들기 위해 select 태그에 추가해야 하는 속성은?</h2>
+            <img src="image.png" alt="select 태그 예시" class="question-image">
         </div>
         
         <div class="options-wrapper">
-            <div class="option" data-correct="false">&lt;head&gt;</div>
-            <div class="option" data-correct="true">&lt;body&gt;</div>
+            <div class="option" data-correct="true">1. multiple</div>
+            <div class="option" data-correct="false">2. label</div>
+            <div class="option" data-correct="false">3. option</div>
         </div>
     </div>
 
