@@ -2,7 +2,6 @@ body {
     font-family: 'Jua', sans-serif;
     margin: 0;
     padding-top: 0;
-    background-color: lab(96.94% 3.34 1.18);
 }
 
 #text {
@@ -77,15 +76,15 @@ body {
 }
 
 .header {
-
+    background-color: #74d582;
     color: white;
     padding: 25px;
     margin: 0;
-    background-color: #fe9292;
+
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     border-bottom: 4px dashed #ffeb3b;
     animation: fadeSlideIn 1s ease-out;
-    text-align:center;
+
     font-family: 'Jua', sans-serif;
 }
 

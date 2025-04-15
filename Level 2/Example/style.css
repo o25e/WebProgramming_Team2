@@ -1,17 +1,17 @@
 body {
     padding-top: 0;
+    background-color: lab(96.94% 3.34 1.18);
 }
 
 .header {
-    background-color: #4fc3f7;
+    background-color: #fe9292;
     color: white;
     padding: 25px;
     margin: 0;
-
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     border-bottom: 4px dashed #ffeb3b;
     animation: fadeSlideIn 1s ease-out;
-
+    text-align: center;
     font-family: 'Jua', sans-serif;
 }
 
@@ -30,7 +30,7 @@ body {
 
 .content-box {
     white-space: pre-line;
-    background-color: white;
+    background-color: #fee2e2;
     border-radius: 15px;
     padding: 25px;
     width: 80%;
@@ -38,7 +38,7 @@ body {
     margin: 0 auto 25px;
     box-sizing: border-box;
     overflow: auto;
-
+    text-align: left;
     margin-top: 20px;
     font-family: "Jua", sans-serif;
 }
@@ -84,6 +84,6 @@ body {
     padding: 10px 10px;
     text-align: left;
     overflow: auto;
-    background-color: #eee;
+    background-color: #fefeec;
     border-radius: 10px;
 }

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 스타일 레이아웃</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; }
+
+        /* 헤더 */
+        .header {
+            background-color: #2DB400;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .header input {
+            width: 50%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* 네비게이션 */
+        .nav {
+            background-color: #fff;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* 메인 레이아웃 */
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            width: 20%;
+            padding: 10px;
+        }
+
+        .content {
+            width: 60%;
+            padding: 10px;
+        }
+
+        .ads {
+            width: 20%;
+            padding: 10px;
+        }
+
+        /* 로그인 폼 */
+        .login-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .login-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 8px;
+            background-color: #2DB400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .search-btn {
+            padding: 8px 14px;
+            margin-left: 8px;
+            background-color: #ffffff;
+            color: #2DB400;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #2DB400;
+            color: #fff;
+            border-color: #2DB400;
+        }
+
+
+        /* 사이드바 메뉴 */
+        .menu {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .menu h4 {
+            margin-bottom: 10px;
+        }
+
+        .menu ul {
+            list-style: none;
+        }
+
+        .menu ul li {
+            margin: 8px 0;
+            padding: 5px;
+        }
+
+        .menu ul li:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        /* 컨텐츠 카드 */
+        .news-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+        }
+
+
+        .news-card img {
+            width: 100%;                 /* 카드 너비에 맞게 */
+            max-width: 400px;            /* 너무 커지지 않도록 제한 */
+            height: auto;                /* 비율 유지 */
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;           /* 위 여백 + 가운데 정렬 */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .news-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .news-card p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* 탭 메뉴 */
+        .tabs {
+            margin-bottom: 20px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .tab-btn.active {
+            background-color: #2DB400;
+            color: #fff;
+        }
+
+        .tab-box {
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .tab-box img {
+            margin-top: 15px;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+
+        /* 광고 박스 */
+        .ads-box {
+            background-color: #fff;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* 푸터 */
+        .footer {
+            background-color: #e0e0e0;
+            padding: 12px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+    <div class="header">
+        <input type="text" placeholder="검색어를 입력하세요" id="searchInput">
+        <button class="search-btn" onclick="handleSearch()">검색</button>
+    </div>
+
+    <div class="nav">
+        <a href="#">메일</a>
+        <a href="#">카페</a>
+        <a href="#">뉴스</a>
+        <a href="#">지도</a>
+        <a href="#">쇼핑</a>
+    </div>
+
+    <div class="container">
+        <!-- 사이드바 -->
+        <div class="sidebar">
+            <div class="login-box">
+                <h3>로그인</h3>
+                <input type="text" placeholder="아이디">
+                <input type="password" placeholder="비밀번호">
+                <button onclick="handleLogin()">로그인</button>
+            </div>
+
+            <div class="menu">
+                <h4>바로가기</h4>
+                <ul>
+                    <li>내 정보</li>
+                    <li>즐겨찾기</li>
+                    <li>설정</li>
+                    <li>고객센터</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 메인 콘텐츠 -->
+        <div class="content">
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="news">뉴스</button>
+                    <button class="tab-btn" data-tab="blog">블로그</button>
+                    <button class="tab-btn" data-tab="event">이벤트</button>
+                </div>
+                <div class="tab-content" id="news">
+                    <div class="news-card">
+                        <h3>오늘의 뉴스</h3>
+                        <p>웹 개발은 지속적으로 발전하고 있으며, 새로운 기술과 도구가 매일같이 등장하고 있습니다.</p>
+                        <img src="https://d2908q01vomqb2.cloudfront.net/2a459380709e2fe4ac2dae5733c73225ff6cfee1/2023/07/16/ecs-image-picture01.png" alt="웹 개발 이미지">
+                    </div>
+                </div>
+                <div class="tab-content" id="blog" style="display: none;">
+                    <div class="news-card">
+                        <h3>블로그 업데이트</h3>
+                        <p>HTML/CSS 기초를 쉽게 배우는 팁을 공유합니다.</p>
+                        <img src="https://source.unsplash.com/400x200/?coding,blog" alt="블로그 이미지">
+                    </div>
+                </div>
+                <div class="tab-content" id="event" style="display: none;">
+                    <div class="news-card">
+                        <h3>이벤트 소식</h3>
+                        <p>4월 신입 개발자 대상 무료 교육 이벤트!</p>
+                        <img src="https://source.unsplash.com/400x200/?event,web" alt="이벤트 이미지">
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <h3>웹 개발 학습</h3>
+                <p>HTML, CSS, JavaScript 기초부터 시작해서 반응형 웹까지 단계별로 배울 수 있는 자료가 많습니다.</p>
+            </div>
+        
+            <div class="news-card">
+                <h3>2025 웹 트렌드</h3>
+                <p>올해는 접근성과 사용자 경험을 강조한 디자인이 인기를 끌고 있으며, CSS 변수와 그리드 레이아웃이 적극 활용되고 있습니다.</p>
+            </div>
+        </div>
+
+        <!-- 광고 영역 -->
+        <div class="ads">
+            <div class="ads-box">
+                <p>이 자리에 광고가 표시됩니다.</p>
+                <small>광고 문의: ad@example.com</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">&copy; 2025 Level 3 Web Page</div>
+</body>
+
+<script>
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // 버튼 스타일 초기화
+            tabButtons.forEach(btn => btn.classList.remove("active"));
+            // 탭 콘텐츠 숨김
+            tabContents.forEach(tab => tab.style.display = "none");
+
+            // 현재 탭 표시
+            button.classList.add("active");
+            document.getElementById(button.dataset.tab).style.display = "block";
+        });
+    });
+
+    // 검색 버튼 클릭 시
+    function handleSearch() {
+            const keyword = document.getElementById("searchInput").value;
+            if (keyword.trim() !== "") {
+                alert(`"${keyword}" 검색어를 입력하셨습니다.`);
+            } else {
+                alert("검색어를 입력하세요.");
+            }
+        }
+
+        // 로그인 버튼 클릭 시
+        function handleLogin() {
+            const idInput = document.querySelector('.login-box input[type="text"]').value.trim();
+            const pwInput = document.querySelector('.login-box input[type="password"]').value.trim();
+
+            if (idInput && pwInput) {
+                alert("로그인 되었습니다.");
+            } else {
+                alert("아이디와 비밀번호를 모두 입력해주세요.");
+            }
+        }
+
+</script>
+
+</html>

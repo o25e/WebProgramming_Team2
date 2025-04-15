@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 개념 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Level 2.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .reaction-button {
+      background-color: #ffc0c0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+          font-family: 'Jua', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .reaction-button:hover {
+      background-color: #ff8585;
+    }
+
+
+
+    .reaction-link:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    .reaction-link:active {
+      color: green;
+    }
+    </style>
+</head>
+<body>
+    <div class="header clearfix">
+        <a href="../Level 2.html" class="button home-btn">Level2</a>
+        <span>반응 선택자</span>
+        <a href="../Quiz/css_quiz8.html" class="button quiz-btn">테스트 시작</a>
+        
+    </div>
+
+    <div class="content-box">
+        <h2>반응 선택자란?</h2>
+        <p>
+          반응 선택자는 사용자의 행동에 따라 스타일이 변하도록 하는 CSS 선택자이다. 주로 <code>:hover</code>, <code>:active</code>, <code>:focus</code>, <code>:visited</code> 등을 사용해서, 마우스를 올렸을 때, 클릭했을 때, 링크를 방문했을 때 등을 처리할 수 있다다.
+        </p>
+      
+        <pre class="codebox"><code>a:hover {
+        color: red;
+        text-decoration: underline;
+      }</code></pre>
+
+    <h2>반응 선택자 예시</h2>
+    <p>
+    아래 버튼을 마우스로 올리면 색상이 변경된다. (hover 효과). 링크를 클릭하면 색상도 달라진다.
+    </p>
+      <button class="reaction-button">마우스를 올려보세요</button>
+      <p>
+        <a href="#" class="reaction-link">방문한 링크</a>
+      </p>
+    </div>
+</body>
+</html>

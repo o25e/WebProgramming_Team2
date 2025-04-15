@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 개념 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Level 2.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box-with-margin-padding {
+      margin: 50px;
+      padding: 10px;
+      background-color: lightgreen; /* 배경 색상 추가 */
+    }
+
+    /* 외부 여백 없이, 내부 여백이 큰 박스 */
+    .box-without-margin {
+      margin: 0;
+      padding: 50px;
+      background-color: lightcoral; /* 배경 색상 추가 */
+    }
+
+    /* 외부 여백만 적용된 박스 */
+    .box-without-padding {
+      margin: 20px;
+      padding: 0;
+      background-color: lightyellow; /* 배경 색상 추가 */
+    }
+    </style>
+</head>
+<body>
+    <div class="header clearfix">
+        <a href="../Level 2.html" class="button home-btn">Level2</a>
+        <span>요소 외부 내부 여백 설정</span>
+        <a href="../Quiz/css_quiz10.html" class="button quiz-btn">테스트 시작</a>
+    </div>
+
+    <div class="content-box">
+        <h2>요소 외부, 내부 여백 설정이란?</h2>
+        <p>
+          요소의 외부와 내부 여백을 설정하는 CSS 속성은 margin과 padding이다. 이 두 속성은 요소의 크기와 배치에 중요한 역할을 한다.
+        </p>
+      
+        <h2>외부 여백 (margin)</h2>
+        <p>
+          margin은 요소의 외부 공간을 설정한다. 이 속성은 요소와 다른 요소 사이의 간격을 결정한다.
+        </p>
+        <pre class="codebox">
+          <code>
+    .box {
+         margin: 20px; /* 외부 여백 20px 설정 */
+     }
+          </code>
+        </pre>
+      
+        <h2>내부 여백 (padding)</h2>
+        <p>
+          padding은 요소의 내부 공간을 설정한다. 이 속성은 요소의 콘텐츠와 테두리 사이의 간격을 조정한한다.
+        </p>
+        <pre class="codebox">
+          <code>
+    .box {
+        padding: 30px; /* 내부 여백 30px 설정 */
+    }
+          </code>
+        </pre>
+      
+        <h2>요소 외부, 내부 여백 예시</h2>
+        <p>
+          아래의 박스들은 각각 다른 방식으로 외부와 내부 여백이 설정된 예시이다. 
+        </p>
+        <div class="box-with-margin-padding">
+          <p>외부 여백이 50px, 내부 여백이 10px인 박스입니다.</p>
+        </div>
+        <div class="box-without-margin">
+          <p>외부 여백이 없고, 내부 여백만 큰 박스입니다.</p>
+        </div>
+        <div class="box-without-padding">
+          <p>내부 여백이 없고, 외부 여백만 적용된 박스입니다.</p>
+        </div>
+      
+    </div>
+</body>
+</html>

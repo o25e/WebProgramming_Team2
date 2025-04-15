@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 개념 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Level 2.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .descendant-box {
+            background-color: #fff8f8;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .parent span {
+            color: #fd8181;
+            font-weight: bold;
+        }
+
+        .decoration {
+            text-decoration: underline;
+        }
+
+        .line-through {
+            text-decoration: line-through;
+        }
+
+        .none {
+            text-decoration: none;
+        }
+
+        .overline {
+            text-decoration: overline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header clearfix">
+        <a href="../Level 2.html" class="button home-btn">Level2</a>
+        <span>자손 선택자와 텍스트 꾸밈</span>
+        <a href="../Quiz/css_quiz7.html" class="button quiz-btn">테스트 시작</a>
+    </div>
+
+    <div class="content-box">
+        <h2>자손 선택자란?</h2>
+        <p>
+          자손 선택자는 특정 요소 내부의 모든 하위 요소를 선택해서 스타일을 적용할 수 있게 해준다.
+          띄어쓰기를 통해 표현하며, 형식은 <code>A B {속성:값;}</code>이다.
+        </p>
+      
+        <pre class="codebox"><code>.parent span {
+        color: #fd8181;
+      }</code></pre>
+      
+        <div class="descendant-box parent">
+          <p>이 문장에서 <span>핑크 글씨</span>는 <code>&lt;span&gt;</code> 태그이고, <code>.parent span</code> 선택자로 스타일이 적용된다.</p>
+        </div>
+      
+        <h2>텍스트 꾸밈 (text-decoration)</h2>
+        <p>
+          텍스트 꾸밈은 <code>text-decoration</code> 속성으로 설정하며, 텍스트에 밑줄, 취소선, 윗줄 등을 넣을 수 있다.
+        </p>
+      
+        <pre class="codebox"><code>.decoration {
+        text-decoration: underline;
+      }</code></pre>
+      
+        <div class="descendant-box">
+          <p class="decoration">이 문장은 밑줄이 그어져 있어요.</p>
+          <p class="line-through">이 문장은 취소선이 그어져 있어요.</p>
+          <p class="overline">이 문장은 윗줄이 있어요.</p>
+          <p class="none">이 문장은 텍스트 꾸밈이 없어요 (기본 상태).</p>
+        </div>
+      
+        <p>주로 링크 태그(&lt;a&gt;)의 밑줄 제거에도 많이 사용된다.</strong> <br><pre class="codebox"><code>a { text-decoration: none; }</code></pre></p>
+      
+    </div>
+</body>
+</html>

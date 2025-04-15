@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 개념 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Level 2.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header clearfix">
+        <a href="../Level 2.html" class="button home-btn">Level2</a>
+        <span>클래스 선택자와 글꼴 종류 설정</span>
+        <a href="../Quiz/css_quiz4.html" class="button quiz-btn">테스트 시작</a>
+    </div>
+
+    <div class="content-box">
+        <h2>클래스 선택자란?</h2>
+        <p>
+          클래스 선택자는 HTML 요소에 <span class="highlight">class 속성</span>을 주고, CSS에서 그 이름 앞에 마침표(<code>.</code>)를 붙여서 선택한다.  
+          여러 요소에 같은 스타일을 적용할 때 유용하다.  
+          한 요소에 여러 클래스를 띄어쓰기로 같이 쓸 수도 있다.
+        </p>
+        <ul>
+          <li>예: &lt;p class="text"&gt;내용&lt;/p&gt;</li>
+          <li>CSS: .text &#123; color: blue; &#125;</li>
+          <li>여러 개 클래스: &lt;div class="box shadow"&gt;</li>
+        </ul>
+    
+        <h2> 글꼴 종류 설정</h2>
+        <p>
+          글꼴을 지정할 때는 <span class="highlight">font-family</span> 속성을 사용한다.  
+          하나의 글꼴이 없을 경우를 대비해서 여러 개를 쉼표로 나열하고, 마지막엔 일반적인 계열(serif, sans-serif 등)을 넣는다.
+        </p>
+        <ul>
+          <li><code>'돋움', '굴림', 'Arial', 'sans-serif'</code> → 앞에서부터 가능한 글꼴을 적용한다</li>
+          <li>앞에 있는 글꼴부터 순서대로 시도해서, 시스템에 없는 경우 뒤에 있는 걸 사용한다</li>
+          <li>글꼴 이름에 띄어쓰기가 있을 경우 ' ' (작은 따옴표)로 감싼다</li>
+        </ul>
+        <p>예:</p>
+        <ul>
+          <li><code>font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;</code></li>
+          <li><code>font-family: 'Georgia', 'Times New Roman', serif;</code></li>
+        </ul>
+    </div>
+</body>
+</html>

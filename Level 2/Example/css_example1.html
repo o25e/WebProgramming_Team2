@@ -10,22 +10,70 @@
 <body>
     <div class="header clearfix">
         <a href="../Level 2.html" class="button home-btn">Level2</a>
-        <span>선택자 우선순위</span>
+        <span>css란? 전체 선택자와 글자 색성 지정</span>
         <a href="../Quiz/css_quiz1.html" class="button quiz-btn">테스트 시작</a>
     </div>
 
     <div class="content-box">
-        <h3>우선순위 계산 규칙:</h3>
-        <p>1. 인라인 스타일 (1000점)</p>
-        <p>2. ID 선택자 (100점)</p>
-        <p>3. 클래스/가상 클래스 선택자 (10점)</p>
-        <p>4. 요소 선택자 (1점)</p>
-        
-        <pre class="codebox">
-#nav { color: red; }
-.item { color: blue; }
-li { color: green; }</pre>
-        <p>!important > 인라인 스타일 > ID > 클래스 > 요소</p>
+        <h2>CSS란?</h2>
+        <p>
+          CSS는 <strong>Cascading Style Sheets</strong>의 약자로, HTML 문서의 디자인과 레이아웃을 담당하는 스타일 언어이다.
+        </p>
+      
+        <h2>CSS 작성 방법</h2>
+        <ol>
+          <li><strong>인라인 스타일</strong> (HTML 요소에 직접 작성)</li>
+          <pre class="codebox"><code>&lt;p style="color: red;"&gt;이 문장은 빨간색입니다.&lt;/p&gt;</code></pre>
+      
+          <li><strong>내부 스타일시트</strong> (&lt;style&gt; 태그 사용)</li>
+          <pre class="codebox"><code>&lt;head&gt;
+        &lt;style&gt;
+          p {
+            color: red;
+          }
+        &lt;/style&gt;
+      &lt;/head&gt;</code></pre>
+      
+          <li><strong>외부 스타일시트</strong> (별도 CSS 파일 연결)</li>
+          <p>html</p>
+          <pre class="codebox"><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+      
+          <p>style.css</p>
+          <pre class="codebox"><code>p {
+        color: red;
+      }</code></pre>
+        </ol>
+      
+        <h2>CSS 기본 구조</h2>
+        <p>
+          <code>선택자 { 속성: 값; }</code> 형식으로 작성하며, 선택자는 HTML 요소를 선택해 스타일을 적용하는 역할을 한다.
+        </p>
+      
+        <h2>전체 선택자</h2>
+        <p>
+          전체 선택자(<code>*</code>)는 HTML 문서의 모든 요소에 동일한 스타일을 적용한다다.
+        </p>
+        <pre class="codebox"><code>* {
+        속성: 값;
+      }</code></pre>
+      
+        <h2>글자 색상 지정 방법</h2>
+        <p>글자 색상은 <code>color</code> 속성을 사용해서 설정할 수 있다. 방법은 여러 가지가 있다:</p>
+      
+        <ol>
+          <li><strong>이름으로 지정</strong></li>
+          <pre class="codebox"><code>color: red;
+color: blue;</code></pre>
+      
+          <li><strong>16진수 코드로 지정</strong></li>
+          <pre class="codebox"><code>color: #ff0000;
+color: #00ff00;</code></pre>
+      
+          <li><strong>RGB 함수로 지정</strong></li>
+          <pre class="codebox"><code>color: rgb(255, 0, 0);
+color: rgb(0, 255, 0);</code></pre>
+        </ol>
+
     </div>
 </body>
 </html>

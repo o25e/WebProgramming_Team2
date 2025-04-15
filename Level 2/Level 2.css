@@ -2,7 +2,7 @@
 body {    
     font-family: 'Quicksand', 'Noto Sans KR', sans-serif;
     text-align: center;
-    background-color: #e0f7ff; /* 밝은 하늘색 */
+    background-color: lab(96.94% 3.34 1.18); /* 밝은 하늘색 */
     margin: 0;
     padding: 0;
     padding-top: 60px;
@@ -38,20 +38,20 @@ h1 {
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: #e1f5fe;
+    background-color:#fef4f4;
     font-size: 15px;
     font-weight: 600;
     display: flex;
     justify-content: center;
     gap: 25px;
     padding: 12px 0;
-    border-bottom: 2px dashed #4fc3f7;
+    border-bottom: 2px dashed #df777c;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 /* 메뉴 항목 스타일 */
 .level-nav a {
-    color: #007acc;
+    color: #df777c;
     text-decoration: none;
     padding: 6px 12px;
     border-radius: 10px;
@@ -59,15 +59,14 @@ h1 {
 }
 
 .level-nav a:hover {
-    background-color: #b3e5fc;
-    color: #01579b;
+    background-color: #ffc7c7;
+    color: #e0646a;
 }
 
 .level-nav a.active {
-    background-color: #4fc3f7;
+    background-color: #df777c;
     color: #fff;
 }
-
 /* 레벨업 계산기 */
 .levelup-box {
     text-align: center;
@@ -181,7 +180,6 @@ h1 {
 .level-status-box.collapsed .level-info-line {
     display: none;
 }
-
 /* 학습 상자 */
 .study-box {
     width: 220px;
@@ -303,7 +301,7 @@ h1 {
 
 /* 푸터 */
 footer {
-    background-color: #81d4fa;
+    background-color: #df777c;
     color: #fff;
     padding: 20px 0;
     font-size: 14px;
