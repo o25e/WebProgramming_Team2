@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>네이버 스타일 레이아웃</title>
+    <title>Level 3 실습예제</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; background-color: #f9f9f9; }
@@ -21,6 +21,29 @@
             border: none;
             border-radius: 5px;
         }
+
+        /* 실습창 돌아가는 버튼 CSS */
+        .btn {
+            display: inline-block;
+            padding: 8px 14px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn.orange {
+            background-color: #FFA500;
+            color: white;
+            border: none;
+        }
+
+        .btn.orange:hover {
+            background-color: #e69500;
+        }
+
 
         /* 네비게이션 */
         .nav {
@@ -231,6 +254,8 @@
     </style>
 </head>
     <div class="header">
+        <!-- 실습창으로 돌아가는 버튼 -->
+        <a class="btn orange" href="../Test/web_test1.html">← Back</a>
         <input type="text" placeholder="검색어를 입력하세요" id="searchInput">
         <button class="search-btn" onclick="handleSearch()">검색</button>
     </div>
