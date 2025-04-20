@@ -21,6 +21,7 @@
         </nav>
     </header>
 
+    <!-- 진행 바 -->
     <div class="progress">
         <div class="progress-bar" id="progress-bar"></div>
     </div>
@@ -48,7 +49,7 @@
         </div>
     </div>
     
-    <div class="container">
+    <div class="container"> <!-- study-box에 class completed 붙으면 완료로 바뀜 -->
         <div class="study-box" onclick="openStudy(1)" id="box1"><img src="Test/src/1.png" alt="예제 1"></div>
         <div class="study-box" onclick="openStudy(2)" id="box2"><img src="Test/src/2.png" alt="예제 2"></div>
         <div class="study-box" onclick="openStudy(3)" id="box3"><img src="Test/src/3.png" alt="예제 3"></div>
@@ -58,7 +59,7 @@
         <div class="study-box" onclick="openStudy(7)" id="box7"><img src="Test/src/7.png" alt="예제 7"></div>
         <div class="study-box" onclick="openStudy(8)" id="box8"><img src="Test/src/8.png" alt="예제 8"></div>
         <div class="study-box" onclick="openStudy(9)" id="box9"><img src="Test/src/9.png" alt="예제 9"></div>
-        <div class="study-box completed" onclick="openStudy(10)" id="box10"><img src="Test/src/10.png" alt="예제 10"></div>
+        <div class="study-box" onclick="openStudy(10)" id="box10"><img src="Test/src/10.png" alt="예제 10"></div>
     </div>
 
     <footer>
@@ -73,11 +74,8 @@
         }
 
         // 홈 페이지에서 진행도 업데이트 로직 추가
-        document.addEventListener("DOMContentLoaded", function() {
-            if (localStorage.getItem('returningFromQuiz') === 'true') {
-                localStorage.removeItem('returningFromQuiz');
+        document.addEventListener("DOMContentLoaded", function() { // returningFromQuiz 제거했음. 그냥 문서 로드될 때마다 얻데이트
                 updateProgress();
-            }
         });
         
         function updateProgress() {

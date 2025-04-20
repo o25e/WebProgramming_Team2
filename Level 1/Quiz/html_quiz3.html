@@ -160,36 +160,6 @@
         <div class="alert-box" id="alertContent"></div>
     </div>
 
-    <script>
-        const options = document.querySelectorAll('.option');
-        const alertOverlay = document.getElementById('alertOverlay');
-        const alertContent = document.getElementById('alertContent');
-
-        options.forEach(option => {
-            option.addEventListener('click', function() {
-                const isCorrect = this.dataset.correct === "true";
-                showFeedback(isCorrect);
-                this.style.pointerEvents = 'none';
-                this.style.opacity = '0.7';
-            });
-        });
-
-        function showFeedback(isCorrect) {
-            alertOverlay.style.display = 'flex';
-            alertContent.innerHTML = isCorrect 
-                ? '<div class="correct">✓ 정답입니다!</div>' 
-                : '<div class="wrong">× 오답입니다!</div>';
-
-            setTimeout(() => {
-                alertOverlay.style.display = 'none';
-            }, 2000);
-        }
-
-        alertOverlay.addEventListener('click', (e) => {
-            if(e.target === alertOverlay) {
-                alertOverlay.style.display = 'none';
-            }
-        });
-    </script>
+    <script src="quiz.js"></script>
 </body>
 </html>
