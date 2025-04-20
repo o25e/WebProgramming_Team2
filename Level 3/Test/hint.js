@@ -1,6 +1,6 @@
 const hintBtn = document.querySelector("#hintBtn");
 // const hintText = document.querySelector("#hintText");
-// const HIDDEN_CLASSNAME = "hidden";
+const HIDDEN_CLASSNAME = "hidden";
 
 function showHint(){
     // 힌트 클릭 시 실습창 예제로 연결

@@ -63,18 +63,15 @@
         }
 
         // 홈 페이지에서 진행도 업데이트 로직 추가
-        document.addEventListener("DOMContentLoaded", function() {
-            if (localStorage.getItem('returningFromQuiz') === 'true') {
-                localStorage.removeItem('returningFromQuiz');
+        document.addEventListener("DOMContentLoaded", function() { // returningFromQuiz 제거했음. 그냥 문서 로드될 때마다 얻데이트
                 updateProgress();
-            }
         });
 
         function updateProgress() {
             const progressBar = document.getElementById('progress-bar');
             let completedStudies = 0;
             for (let i = 1; i <= 10; i++) {
-                if (localStorage.getItem(`quizCompleted${i}`) === 'true') {
+                if (localStorage.getItem(`level3Completed`) === 'true') { // 이름 변경함
                     completedStudies++;
                     document.getElementById(`box${i}`).classList.add('completed');
                 }

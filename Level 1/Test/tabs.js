@@ -1,4 +1,4 @@
-const ACTIVE_CLASSNAME = "active";
+const ACTIVE_CLASSNAME = "active"; // hidden은 hint에 정의
 const htmlTab = document.querySelector(".tabs > button:first-child");
 const cssTab = document.querySelector(".tabs > button:last-child");
 const htmlCode = document.getElementById("htmlCode");
