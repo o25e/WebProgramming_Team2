@@ -9,6 +9,7 @@ function showHint(){
     //     hintText.classList.remove(HIDDEN_CLASSNAME);
     // else
     //     hintText.classList.add(HIDDEN_CLASSNAME);
+    localStorage.setItem(`level3Completed`, 'true');  // 힌트보면 레벨3 완료
 }
 
 hintBtn.addEventListener("click", showHint);

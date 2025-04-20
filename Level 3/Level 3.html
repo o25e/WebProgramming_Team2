@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="Level 3.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="fixed-header">
         <h1>Level 3</h1>
-        
+
         <!-- 메뉴바 추가 -->
         <nav class="level-nav">
             <a href="../home.html">홈</a>
@@ -26,7 +28,7 @@
 
     <!-- 레벨업 계산기 -->
     <div class="levelup-box">
-        <p id="levelup-text">웹마스터까지 남은 진행률: <span id="levelup-percent">100%</span></p>
+        <p id="levelup-text">웹마스터가 되기까지 현재 진행률: <span id="levelup-percent">0%</span></p>
     </div>
 
     <!-- 레벨 시스템 -->
@@ -45,12 +47,12 @@
             <span class="label">다음 레벨까지 남은 예제</span>
             <span id="remaining-examples">10</span>
         </div>
-    </div>    
+    </div>
 
     <div class="container">
         <div class="study-box" onclick="openStudy(1)" id="box1"><img src="Web.png" alt="예제 1"></div>
     </div>
-    
+
     <footer>
         <p>© 2025 HTML & CSS Study | All Rights Reserved</p>
     </footer>
@@ -63,23 +65,46 @@
         }
 
         // 홈 페이지에서 진행도 업데이트 로직 추가
-        document.addEventListener("DOMContentLoaded", function() { // returningFromQuiz 제거했음. 그냥 문서 로드될 때마다 얻데이트
-                updateProgress();
+        document.addEventListener("DOMContentLoaded", function () { // returningFromQuiz 제거했음. 그냥 문서 로드될 때마다 얻데이트
+            updateProgress();
         });
-
+        // 진행바, 진행률, 상태 업데이트 함수
         function updateProgress() {
             const progressBar = document.getElementById('progress-bar');
+            const levelupPercent = document.getElementById('levelup-percent');
             let completedStudies = 0;
+            let completedLevel1 = 0;
+            let completedLevel2 = 0;
+            let completedLevel3 = 0;
+
+            // level 3 완료하면 표시 및 개수 세기
+            if (localStorage.getItem(`level3Completed`) === 'true') { // 이름 변경함
+                completedLevel3++; 
+                document.getElementById(`box1`).classList.add('completed');
+            }
+            // level 3 진행도바 업데이트
+            const progressPercentage = (completedLevel3 / 1) * 100;
+            progressBar.style.setProperty('--target-width', `${progressPercentage}%`);
+
+            // 반복문으로 level 1 완료 개수 세기
             for (let i = 1; i <= 10; i++) {
-                if (localStorage.getItem(`level3Completed`) === 'true') { // 이름 변경함
-                    completedStudies++;
-                    document.getElementById(`box${i}`).classList.add('completed');
+                if (localStorage.getItem(`quizCompleted${i}`) === 'true') {
+                    completedLevel1++;
                 }
             }
+            // 반복문으로 level 2 완료 개수 세기
+            for (let i = 1; i <= 10; i++) {
+                if (localStorage.getItem(`cquizCompleted${i}`) === 'true') {
+                    completedLevel2++;
+                }
+            }
+            // 총 완료 개수 구하기, 전체 진행 퍼센트 구하기
+            completedStudies = completedLevel1 + completedLevel2 + completedLevel3;
+            const totalPercent = Math.round((completedStudies / 21) * 10000)/100;
+            // 퍼센트 입력
+            levelupPercent.innerText = `${totalPercent}%`;
 
-            const progressPercentage = (completedStudies / 10) * 100;
-            progressBar.style.width = `${progressPercentage}%`;
-
+            // 상태 창
             const totalExamples = 10;
             let completed = 4; // 예시: 4개 완료했다고 가정
 
@@ -114,4 +139,5 @@
         }
     </script>
 </body>
+
 </html>

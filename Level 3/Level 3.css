@@ -1,4 +1,7 @@
 /* 기본 설정 */
+:root {
+    --target-width: 0%; /* 진행 바 길이 변수 */
+}
 body {    
     font-family: 'Quicksand', 'Noto Sans KR', sans-serif;
     text-align: center;
@@ -261,7 +264,7 @@ h1 {
 .progress {
     background-color: #b2ebf2;
     border-radius: 20px;
-    width: 80%;
+    /* width: 80%; */
     height: 30px;
     margin: 20px auto;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
@@ -323,7 +326,7 @@ footer {
 
 @keyframes growBar {
     from { width: 0%; }
-    to { width: var(--target-width, 90%); }
+    to { width: var(--target-width, 0%); }
 }
 
 @keyframes wiggle {
