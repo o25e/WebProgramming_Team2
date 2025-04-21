@@ -50,91 +50,94 @@
         </div>
     </div>
 
-    <div class="container"> <!-- study-box에 class completed 붙으면 완료로 바뀜 -->
-        <div class="study-box" onclick="openStudy(1)" id="box1"><img src="Test\cssimage\1.png" alt="예제 1"></div>
-        <div class="study-box" onclick="openStudy(2)" id="box2"><img src="Test\cssimage\2.png" alt="예제 2"></div>
-        <div class="study-box" onclick="openStudy(3)" id="box3"><img src="Test\cssimage\3.png" alt="예제 3"></div>
-        <div class="study-box" onclick="openStudy(4)" id="box4"><img src="Test\cssimage\4.png" alt="예제 4"></div>
-        <div class="study-box" onclick="openStudy(5)" id="box5"><img src="Test\cssimage\5.png" alt="예제 5"></div>
-        <div class="study-box" onclick="openStudy(6)" id="box6"><img src="Test\cssimage\6.png" alt="예제 6"></div>
-        <div class="study-box" onclick="openStudy(7)" id="box7"><img src="Test\cssimage\7.png" alt="예제 7"></div>
-        <div class="study-box" onclick="openStudy(8)" id="box8"><img src="Test\cssimage\8.png" alt="예제 8"></div>
-        <div class="study-box" onclick="openStudy(9)" id="box9"><img src="Test\cssimage\9.png" alt="예제 9"></div>
-        <div class="study-box" onclick="openStudy(10)" id="box10"><img src="Test\cssimage\10.png" alt="예제 10"></div>
+    <div class="container">
+        <div class="study-box" onclick="openStudy(1)" id="box11"><img src="Test\cssimage\1.png" alt="예제 1"></div>
+        <div class="study-box" onclick="openStudy(2)" id="box12"><img src="Test\cssimage\2.png" alt="예제 2"></div>
+        <div class="study-box" onclick="openStudy(3)" id="box13"><img src="Test\cssimage\3.png" alt="예제 3"></div>
+        <div class="study-box" onclick="openStudy(4)" id="box14"><img src="Test\cssimage\4.png" alt="예제 4"></div>
+        <div class="study-box" onclick="openStudy(5)" id="box15"><img src="Test\cssimage\5.png" alt="예제 5"></div>
+        <div class="study-box" onclick="openStudy(6)" id="box16"><img src="Test\cssimage\6.png" alt="예제 6"></div>
+        <div class="study-box" onclick="openStudy(7)" id="box17"><img src="Test\cssimage\7.png" alt="예제 7"></div>
+        <div class="study-box" onclick="openStudy(8)" id="box18"><img src="Test\cssimage\8.png" alt="예제 8"></div>
+        <div class="study-box" onclick="openStudy(9)" id="box19"><img src="Test\cssimage\9.png" alt="예제 9"></div>
+        <div class="study-box" onclick="openStudy(10)" id="box20"><img src="Test\cssimage\10.png" alt="예제 10"></div>
     </div>
+    <button onclick="resetProgress()">진행도 초기화</button>
+
 
     <footer>
         <p>© 2025 HTML & CSS Study | All Rights Reserved</p>
     </footer>
 
     <script>
-        // 각 스터디 박스를 클릭했을 때 해당 학습 페이지로 이동
-        function openStudy(id) {
-            window.open(`./Example/css_example${id}.html`, '_self');
-            checkCompletion(id);
-        }
-
-        // 홈 페이지에서 진행도 업데이트 로직 추가
-        document.addEventListener("DOMContentLoaded", function () { // returningFromQuiz 제거했음. 그냥 문서 로드될 때마다 얻데이트
-            updateProgress();
-        });
-        // 진행바, 진행률, 상태 업데이트 함수
+        // 진행도 업데이트 함수 전체
         function updateProgress() {
             const progressBar = document.getElementById('progress-bar');
             const levelupPercent = document.getElementById('levelup-percent');
-            let completedStudies = 0;
+
             let completedLevel1 = 0;
             let completedLevel2 = 0;
             let completedLevel3 = 0;
 
-            // 반복문으로 level 2 완료 표시 및 완료 개수 세기
-            for (let i = 1; i <= 10; i++) {
-                if (localStorage.getItem(`cquizCompleted${i}`) === 'true') { // 앞에 c로 html과 구분
-                    completedLevel2++;
-                    document.getElementById(`box${i}`).classList.add('completed');
-                }
-            }
-            // level 2 진행도바 % 계산
-            const progressPercentage = (completedLevel2 / 10) * 100;
-            // level 2 진행도바 너비 변수 변경
-            progressBar.style.setProperty('--target-width', `${progressPercentage}%`);
-
-            // 반복문으로 level 1 완료 개수 세기
+            // Level 1 예제 완료 체크 및 표시
             for (let i = 1; i <= 10; i++) {
                 if (localStorage.getItem(`quizCompleted${i}`) === 'true') {
                     completedLevel1++;
+                    const box = document.getElementById(`box${i}`);
+                    if (box) box.classList.add('completed');
                 }
             }
 
-            // level 3 완료 여부 확인
-            if (localStorage.getItem(`level3Completed`) === 'true') {
-                completedLevel3++;
+            // Level 2 예제 완료 체크 및 표시
+            for (let i = 1; i <= 10; i++) {
+                if (localStorage.getItem(`cquizCompleted${i}`) === 'true') {
+                    completedLevel2++;
+                    const box = document.getElementById(`box${i + 10}`);
+                    if (box) box.classList.add('completed');
+                }
             }
 
-            // 총 완료 개수 구하기, 전체 진행 퍼센트 구하기
-            completedStudies = completedLevel1 + completedLevel2 + completedLevel3;
-            const totalPercent = Math.round((completedStudies / 21) * 10000)/100;
-            // 퍼센트 입력
+            // Level 3 예제 완료 체크 및 표시
+            if (localStorage.getItem(`level3Completed`) === 'true') {
+                completedLevel3++;
+                const box = document.getElementById(`box31`);
+                if (box) box.classList.add('completed');
+            }
+
+            // ✅ 전체 퍼센트는 항상 21개 기준
+            const completedStudies = completedLevel1 + completedLevel2 + completedLevel3;
+            const totalPercent = Math.round((completedStudies / 21) * 10000) / 100;
             levelupPercent.innerText = `${totalPercent}%`;
 
-            // 상태 창
-            const totalExamples = 10;
-            let completed = 4; // 예시: 4개 완료했다고 가정
+            // ✅ 현재 페이지 기준 레벨 수동 설정
+            let currentLevel = 2;
 
-            const remaining = totalExamples - completed;
+            let currentProgress = 0;
+            let totalExamples = 10;
+
+            if (currentLevel === 1) {
+                currentProgress = completedLevel1;
+                totalExamples = 10;
+            } else if (currentLevel === 2) {
+                currentProgress = completedLevel2;
+                totalExamples = 10;
+            } else if (currentLevel === 3) {
+                currentProgress = completedLevel3;
+                totalExamples = 1;
+            }
+
+            document.getElementById("current-level").innerText = currentLevel;
             const levelInfo = [
                 { level: 1, title: "🐣 웹 새싹" },
                 { level: 2, title: "🛠️ 웹 도전자" },
                 { level: 3, title: "👑 웹 마스터" },
             ];
-
-            let currentLevel = 1;
-            if (completed >= 10) currentLevel = 2;
-            if (completed >= 20) currentLevel = 3;
-
-            document.getElementById("current-level").innerText = currentLevel;
             document.getElementById("level-title").innerText = levelInfo[currentLevel - 1].title;
-            document.getElementById("remaining-examples").innerText = totalExamples - completed;
+            document.getElementById("remaining-examples").innerText = totalExamples - currentProgress;
+
+            // ✅ 진행률 바는 현재 레벨 기준
+            const progressPercentage = Math.round((currentProgress / totalExamples) * 100);
+            progressBar.style.setProperty('--target-width', `${progressPercentage}%`);
         }
 
         // 프로필 접기/펼치기 기능
@@ -150,6 +153,30 @@
                 button.textContent = "접기 ⬆";
             }
         }
+
+        // 학습 페이지 열기 함수
+        function openStudy(id) {
+            const currentPage = decodeURIComponent(window.location.pathname.toLowerCase());
+
+            if (currentPage.includes("level 1")) {
+                window.open(`./Example/html_example${id}.html`, '_self');
+            } else if (currentPage.includes("level 2")) {
+                window.open(`./Example/css_example${id}.html`, '_self');
+            } else if (currentPage.includes("level 3")) {
+                window.open(`./Test/web_test${id}.html`, '_self');
+            }
+        }
+
+        // 문서 로드 시 진행도 업데이트 실행
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgress();
+        });
+        function resetProgress() {
+            localStorage.clear();
+            alert("진행도가 초기화되었습니다!");
+            location.reload(); // 페이지 새로고침
+        }
+
     </script>
 </body>
 

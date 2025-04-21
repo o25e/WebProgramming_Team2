@@ -1,87 +1,115 @@
-body{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    background-image: linear-gradient(to bottom, #71bffb,white);
-    margin: 0;
-    padding: 0;
-}
-html,body{
-    height:100%;
-    margin:0;
+body {
+  font-family: "Jua", 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #bdeef5;
+  color: #333;
+  text-align: center;
 }
 
-.title{
-    font-family: "Jua", sans-serif;
-    color: white; 
-    -webkit-text-stroke: 1px rgb(72, 151, 242); 
-    text-shadow: 2px 2px 4px rgb(72, 150, 181);
-    margin-top: 0px;
-    font-size: 100px;
-    text-align: center;
+.title {
+  font-size: clamp(30px, 8vw, 90px);
+  margin-top: 100px;
+  color: white;
+  text-shadow: 2px 2px 4px rgb(72, 150, 181);
 }
-.explanation {
-    font-family: "Jua", sans-serif;
-    color: white; 
-    -webkit-text-stroke: 1px rgb(181, 215, 255); 
-    text-shadow: 2px 2px 4px rgb(72, 150, 181);
-    margin-top:670px;
-    font-size: 36px; 
-    text-align: center;
+
+.cloud-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: clamp(20px, 5vh, 100px);
 }
+
+.cloud-box {
+  width: 30vw;
+  max-width: 250px;
+  position: relative;
+  text-align: center;
+}
+
+.cloud-img {
+  width: 100%;
+  height: auto;
+}
+
+.cloud-text {
+  position: absolute;
+  color: #333;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  font-size: clamp(12px, 3vw, 25px);
+}
+
+.description {
+  background-color: #E4FCFF;
+  margin: 50px auto;
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: clamp(12px, 4vw, 25px);
+  line-height: 2;
+  width: 90%;
+  max-width: 800px;
   
-.html_cloud{
-    font-family: "Jua", sans-serif;
-    position: absolute;
-    top: 300px;
-    right: 150px;
-    width: 450px; 
-    height: auto;
 }
 
-.css_cloud{
-    font-family: "Jua", sans-serif;
-    position: absolute;
-    top: 500px;
-    left: 120px;
-    width: 450px; 
-    height: auto;
-}
-.train_green{
-    position: absolute;
-    top: 1420px;
-    left: 10px;
-    width: 330px; 
-    height: auto;
-}
-.level1{
-    position: absolute;
-    top: 1500px;
-    left: 380px;
-    width: 330px; 
-    height: auto;
-}
-.level2{
-    position: absolute;
-    top: 1500px;
-    left: 765px;
-    width: 330px; 
-    height: auto;
-}
-.level3{
-    position: absolute;
-    top: 1500px;
-    left: 1170px;
-    width: 330px; 
-    height: auto;
-}
-.skeleton{
-    position: absolute;
-    top: 50px;
-    right: 100px;
-    width: 300px; 
-    height: auto;
+.scene-container {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  overflow: hidden;
+  padding-top: 150px;
 }
 
+.forest {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
 
+.bridge-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
 
+.bridge {
+  width: 100%;
+  display: block;
+}
+
+.train-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+.train {
+  width: 80%;
+  height: auto;
+}
+
+.level-btn {
+  position: absolute;
+  top: 51%;
+  transform: translateX(-50%);
+  background-color:transparent;
+  color: transparent;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: clamp(5px, 4vw, 100px);
+  cursor: pointer;
+  z-index: 4;
+}
+
+.level1 { left: 40%; }
+.level2 { left: 60.5%; }
+.level3 { left: 80.5%; }

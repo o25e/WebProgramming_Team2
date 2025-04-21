@@ -49,22 +49,26 @@ body {
 }
 
 .button {
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
     display: inline-block;
-    padding: 12px 30px;
-    border-radius: 20px;
+    padding: 8px 16px;
+    overflow: hidden;
+    text-align: center;
+
     text-decoration: none;
-    color: white;
     font-weight: bold;
-    transition: all 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 
 .home-btn {
-    background-color: #FFA500;
+    background-color: orange;
 }
 
 .quiz-btn {
-    background-color: #008000;
+    background-color: #1DCD9F;
 }
 
 .button:hover {
