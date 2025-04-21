@@ -2,157 +2,28 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>CSS 퀴즈</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 퀴즈</title>
+    <link rel="stylesheet" href="htmlquiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-        header {
-            background-color: #87CEEB;
-            padding: 15px 0;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        header h2 {
-            margin: 8px 0;
-            font-size: 1.4em;
-            color: #333;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-            color: #333;
-        }
-
-        .quiz-container {
-            border: 2px solid #000;
-            width: 65%;
-            height: 65vh;
-            margin: 0 auto;
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            padding: 25px;
-            box-sizing: border-box;
-        }
-
-        .question-box {
-            background-color: #87CEEB;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 25px;
-        }
-
-        .options-wrapper {
-            flex: 1;
-            overflow: auto;
-        }
-
-        .option {
-            background-color: #008000;
-            color: white;
-            padding: 15px;
-            margin: 10px auto;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            max-width: 40%;
-            width: 100%;
-            text-align: center;
-            box-sizing: border-box;
-        }
-
-        .option:hover {
-            background-color: #006400;
-        }
-
-        .nav-buttons {
-            text-align: center;
-            margin: 30px 0;
-            padding: 0 10%;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 30px;
-            margin: 0 25px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .home-btn { 
-            background-color: #FFA500; 
-        }
-        .code-btn { 
-            background-color: #008000; 
-        }
-
-        .button:hover {
-            opacity: 0.8;
-            transform: translateY(-2px);
-        }
-
-        .alert-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .alert-box {
-            background: white;
-            padding: 30px 50px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
-            text-align: center;
-        }
-
-        .correct {
-            color: #008000;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .wrong {
-            color: #FF0000;
-            font-size: 24px;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
-    <header></header>
 
-    <h1>4장 HTML 퀴즈</h1>
-    <div class="quiz-container">
-        <div class="question-box">
-            <h2>문제: i태그가 의미하는 것과 효과는 무엇인가?</h2>
-        </div>
-        <div class="options-wrapper">
-            <div class="option" data-correct="false">1. isolated, 고립된 글자</div>
-            <div class="option" data-correct="true">2. italic, 기울어진 글자</div>
-            <div class="option" data-correct="false">3. inline, 인라인 글자</div>
-        </div>
+
+    <div class="header clearfix">
+        <a class="btn orange" href="../Example/html_example4.html">← Back</a>
+        <span>4장 html 퀴즈</span>
+        <a class="btn mint" href="../Test/html_test4.html">Code →</a>
     </div>
-
-    <div class="nav-buttons">
-        <a href="../Example/html_example4.html" class="button home-btn">이전 페이지로</a>
-        <a href="../Test/html_test4.html" class="button code-btn">코드 보기</a>
+    <div class="quiz-container">
+            <h1>Q. 글자를 굵게 표시할 때 사용하는 태그는 무엇인가요?</h1>
+            <div class="options-wrapper">
+                <div class="option" data-correct="false" > &lt;i&gt;</div>
+                <div class="option"data-correct="false">&lt;strong&gt;</div>
+                <div class="option"data-correct="true">&lt;b&gt;</div>
+                <div class="option"data-correct="false">&lt;em&gt;</div>
+            </div>
     </div>
 
     <div class="alert-overlay" id="alertOverlay">

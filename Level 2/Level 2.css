@@ -5,7 +5,7 @@
 body {    
     font-family: 'Quicksand', 'Noto Sans KR', sans-serif;
     text-align: center;
-    background-color: lab(96.94% 3.34 1.18); /* 밝은 하늘색 */
+    background-color: #feecec;
     margin: 0;
     padding: 0;
     padding-top: 60px;
@@ -41,7 +41,7 @@ h1 {
     left: 0;
     right: 0;
     z-index: 999;
-    background-color:#fef4f4;
+    background-color:#feecec;
     font-size: 15px;
     font-weight: 600;
     display: flex;
