@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>웹페이지 마스터되기</title>
-    <link rel="stylesheet" href="home.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹페이지 마스터 되기</title>
+    <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
-    <div class="title">
-        <p>웹페이지 마스터되기</p>
+    <div class="title">웹페이지 마스터되기</div>
+
+    <!-- 구름들 -->
+    <div class="cloud-wrapper">
+      <div class="cloud-box">
+        <a href="./info/ex_html.html">
+          <img src="cloud.png" class="cloud-img" />
+          <div class="cloud-text">HTML이란?</div>
+        </a>
+      </div>
+      <div class="cloud-box">
+        <a href="./info/ex_css.html">
+          <img src="cloud.png" class="cloud-img" />
+          <div class="cloud-text">CSS란?</div>
+        </a>
+      </div>
     </div>
-    <div class="explanation">
-        <p>이 홈페이지는 한 웹페이지를 완벽하게 구현하고자 만들어진 것으로</p>
-        <p>level 1은 html</p>
-        <p>level 2는 html+css</p>
-        <p>level 3은 웹페이지로</p>
-        <p>레벨 하나하나씩 해결해나가다 보면</p>
-        <p>웹페이지 마스터가 된다</p>
+  
+    <!-- 설명 박스 -->
+    <div class="description">
+      <p>이 홈페이지는 한 웹페이지를 완벽하게 구현하고자 만들어진 것으로<br>
+        Level 1은 html<br>
+        Level 2는 html+css<br>
+        Level 3은 웹페이지 로<br>
+        레벨 하나하나씩 해결해나가다 보면 웹페이지 마스터가 된다</p>
     </div>
-    <a href="./info/ex_html.html">
-        <img src="cloud.png" class="html_cloud">
-    </a>
-    <a href="./info/ex_css.html">
-        <img src="cloud.png" class="css_cloud">
-    </a>
-    <a href="./Level 1/Level 1.html">
-        <img src="train_red.png" class="level1">
-    </a>
-    <a href="./Level 2/Level 2.html">
-        <img src="train_yellow.png" class="level2">
-    </a>
-    <a href="./Level 3/Level 3.html">
-        <img src="train_red.png" class="level3">
-    </a>
-    <img src = "train_green.png" class = "train_green">
-</body>
+  
+    <!-- 기차와 다리 -->
+    <div class="scene-container">
+      <img src="forest.png" class="forest">
+      <div class="bridge-wrapper">
+        <img src="bridge.png" class="bridge">
+      </div>
+  
+      <div class="train-container">
+        <img src="train.png" class="train">
+        <button class="level-btn level1" onclick="location.href='./Level 1/Level 1.html'">레벨 1</button>
+        <button class="level-btn level2" onclick="location.href='./Level 2/Level 2.html'">레벨 2</button>
+        <button class="level-btn level3" onclick="location.href='./Level 3/Level 3.html'">레벨 3</button>
+      </div>
+    </div>
+  
+    <script>
+      function adjustTrainPosition() {
+        const bridge = document.querySelector(".bridge");
+        const trainContainer = document.querySelector(".train-container");
+        const bridgeHeight = bridge.clientHeight;
+        trainContainer.style.bottom = bridgeHeight + "px";
+      }
+  
+      window.addEventListener("load", adjustTrainPosition);
+      window.addEventListener("resize", adjustTrainPosition);
+    </script>
 </html>
