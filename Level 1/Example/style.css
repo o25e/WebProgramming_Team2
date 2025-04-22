@@ -1,7 +1,9 @@
+/* 글로벌 스타일 */
 body {
     padding-top: 0;
 }
 
+/* 헤더 네비게이션 바 */
 .header {
     background-color: #4fc3f7;
     color: white;
@@ -28,6 +30,7 @@ body {
     float: right;
 }
 
+/* 주요 콘텐츠 영역 */
 .content-box {
     white-space: pre-line;
     background-color: white;
@@ -48,6 +51,7 @@ body {
     padding: 0 10%;
 }
 
+/* 버튼 공통 스타일 */
 .button {
     cursor: pointer;
     border-radius: 10px;
@@ -63,6 +67,7 @@ body {
     color: white;
 }
 
+/* 컴포넌트 변형 스타일 */
 .home-btn {
     background-color: orange;
 }
@@ -71,17 +76,20 @@ body {
     background-color: #1DCD9F;
 }
 
+/* 인터랙티브 효과 */
 .button:hover {
     opacity: 0.8;
     transform: translateY(-2px);
 }
 
+/* 유틸리티 클래스 */
 .clearfix::after {
     content: "";
     display: block;
     clear: both;
 }
 
+/* 코드 박스 스타일 */
 .codebox {
     margin: auto;
     width: 80%;
