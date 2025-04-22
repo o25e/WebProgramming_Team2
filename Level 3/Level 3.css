@@ -48,13 +48,13 @@ h1 {
     justify-content: center;
     gap: 25px;
     padding: 12px 0;
-    border-bottom: 2px dashed #74d582;
+    border-bottom: 2px dashed #58ab65;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 /* 메뉴 항목 스타일 */
 .level-nav a {
-    color: #74d582;
+    color: #58ab65;
     text-decoration: none;
     padding: 6px 12px;
     border-radius: 10px;
@@ -67,7 +67,7 @@ h1 {
 }
 
 .level-nav a.active {
-    background-color: #74d582;
+    background-color: #58ab65;
     color: #fff;
 }
 

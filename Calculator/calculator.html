@@ -3,181 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>계산기 도구</title>
+  <title>Calculator</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #f0f4f8;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #007acc;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 20px;
-      justify-content: center;
-    }
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 30px;
-      flex: 1 1 450px;
-      min-width: 300px;
-    }
-    h2 {
-      margin-bottom: 20px;
-      color: #333;
-    }
-    label {
-      display: block;
-      margin: 12px 0;
-    }
-    input {
-      width: 100px;
-      padding: 5px;
-      margin-left: 10px;
-    }
-    button {
-      padding: 8px 15px;
-      font-size: 15px;
-      margin-top: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    p {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      padding: 20px;
-      color: #777;
-    }
-
-    #previewArea {
-        margin-top: 30px;
-        text-align: center;
-        font-size: 14px;
-    }
-
-    .margin-layer, .border-layer, .padding-layer, .content-layer {
-        display: inline-block;
-        position: relative;
-        transition: all 0.3s ease;
-    }
-    .margin-layer { background-color: #f8d7da; padding: 0; }
-    .border-layer { background-color: #ffeeba; padding: 0; }
-    .padding-layer { background-color: #d4edda; padding: 0; }
-    .content-layer {
-        background-color: #cce5ff;
-        min-width: 50px;
-        min-height: 50px;
-        line-height: 50px;
-        text-align: center;
-        color: #333;
-    }
-
-    .label {
-        position: absolute;
-        top: -18px;
-        left: 5px;
-        font-size: 12px;
-        font-weight: bold;
-        color: #555;
-        background: white;
-        padding: 2px 6px;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-        z-index: 10;
-        cursor: default;
-    }
-    .label::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        transform: translateY(-50%);
-        border-width: 6px;
-        border-style: solid;
-        border-color: transparent #333 transparent transparent;
-        opacity: 0;
-        transition: all 0.2s ease;
-    }
-    .label:hover::before { opacity: 1; left: 98%; }
-    .label::after {
-        content: attr(data-tooltip);
-        position: absolute;
-        top: 50%;
-        left: 110%;
-        transform: translateY(-50%);
-        background: #333;
-        color: #fff;
-        padding: 6px 10px;
-        border-radius: 6px;
-        font-size: 12px;
-        white-space: nowrap;
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.2s ease;
-        z-index: 999;
-    }
-    .label:hover::after {
-        opacity: 1;
-        left: 105%;
-    }
-  </style>
+  <link rel="stylesheet" href="calculator.css">
 </head>
 <body>
 
-  <header>
-    <h1>🧮 계산기 도구</h1>
-    <nav>
+  <header class="fixed-header">
+    <h1>📦BoxBuddy</h1>
+    <nav class="level-nav">
       <a href="../home.html">홈</a>
       <a href="../Level 1/Level 1.html">Level 1</a>
       <a href="../Level 2/Level 2.html">Level 2</a>
       <a href="../Level 3/Level 3.html">Level 3</a>
+      <a href="../Calculator/calculator.html" class="active">Calculator</a>
     </nav>
   </header>
 
   <div class="container">
-    <!-- 비율 계산기 카드 -->
-    <div class="card">
-      <h2>📐 반응형 디자인 비율 계산기</h2>
-      <label>부모 요소 너비 (px): <input type="number" id="parentWidth" /></label>
-      <label>자식 요소 너비 (px): <input type="number" id="childWidth" /></label>
-      <button onclick="calculateRatio()">비율 계산</button>
-      <p id="ratioResult">비율: </p>
-    </div>
-
-    <!-- 박스 모델 카드 -->
-    <div class="card">
+    <!-- 입력 폼 카드 -->
+    <div class="card form-card">
       <h2>📦 레이아웃 박스 모델 계산기</h2>
       <label>콘텐츠 너비 (width, px): <input type="number" id="width" /></label>
       <label>패딩 (padding, px): <input type="number" id="padding" /></label>
@@ -185,8 +30,11 @@
       <label>마진 (margin, px): <input type="number" id="margin" /></label>
       <button onclick="calculateBoxModel()">총 크기 계산</button>
       <p id="boxResult">총 요소 크기: </p>
+    </div>
 
-      <h3>🔍 박스 모델 시각화</h3>
+    <!-- 박스 모델 시각화 카드 -->
+    <div class="card visual-card">
+      <h3>🔍 박스 모델 비율 시각화</h3>
       <div id="previewArea">
         <div class="margin-layer">
           <span class="label" data-tooltip="요소와 다른 요소 사이의 외부 여백입니다.">Margin</span>
@@ -205,35 +53,10 @@
   </div>
 
   <footer>
-    © 2025 HTML & CSS Study | 계산기 도구 페이지
+    © 2025 HTML & CSS Study | WebProgramming_Team2
   </footer>
 
-  <script>
-    function calculateRatio() {
-      const parent = parseFloat(document.getElementById('parentWidth').value);
-      const child = parseFloat(document.getElementById('childWidth').value);
-      if (!isNaN(parent) && !isNaN(child) && parent !== 0) {
-        const ratio = (child / parent) * 100;
-        document.getElementById('ratioResult').innerText = `비율: ${ratio.toFixed(2)}%`;
-      } else {
-        document.getElementById('ratioResult').innerText = '정확한 숫자를 입력해주세요.';
-      }
-    }
-
-    function calculateBoxModel() {
-      const width = parseFloat(document.getElementById('width').value) || 0;
-      const padding = parseFloat(document.getElementById('padding').value) || 0;
-      const border = parseFloat(document.getElementById('border').value) || 0;
-      const margin = parseFloat(document.getElementById('margin').value) || 0;
-      const total = width + padding * 2 + border * 2 + margin * 2;
-      document.getElementById('boxResult').innerText = `총 요소 크기: ${total}px`;
-      document.querySelector(".margin-layer").style.padding = `${margin}px`;
-      document.querySelector(".border-layer").style.padding = `${border}px`;
-      document.querySelector(".padding-layer").style.padding = `${padding}px`;
-      document.querySelector(".content-layer").style.width = `${width}px`;
-      document.querySelector(".content-layer").style.height = `${width / 2}px`;
-    }
-  </script>
+  <script src="calculator.js"></script>
 
 </body>
 </html>
