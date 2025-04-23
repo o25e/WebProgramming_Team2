@@ -1,4 +1,4 @@
-// 프로필 접기/펼치기 기능
+// 프로필 접기/펼치기 기능 함수
 function toggleLevelBox() {
     const box = document.getElementById("levelStatusBox");
     const button = document.getElementById("toggleBtn");
