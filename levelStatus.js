@@ -1,18 +1,20 @@
 // 진행도 업데이트 함수 전체
+let completedLevel1 = 0;
+let completedLevel2 = 0;
+let completedLevel3 = 0;
+
 function updateProgress(pageLevel = 1) {
     const progressBar = document.getElementById('progress-bar');
     const levelupPercent = document.getElementById('levelup-percent');
 
-    let completedLevel1 = 0;
-    let completedLevel2 = 0;
-    let completedLevel3 = 0;
+    completedLevel1 = 0;
+    completedLevel2 = 0;
+    completedLevel3 = 0;
 
     // Level 1 예제 완료 체크 및 표시
     for (let i = 1; i <= 10; i++) {
         if (localStorage.getItem(`quizCompleted${i}`) === 'true') {
             completedLevel1++;
-            const box = document.getElementById(`box${i}`);
-            if (box) box.classList.add('completed');
         }
     }
 
@@ -20,16 +22,12 @@ function updateProgress(pageLevel = 1) {
     for (let i = 1; i <= 10; i++) {
         if (localStorage.getItem(`cquizCompleted${i}`) === 'true') {
             completedLevel2++;
-            const box = document.getElementById(`box${i + 10}`);
-            if (box) box.classList.add('completed');
         }
     }
 
     // Level 3 예제 완료 체크 및 표시
     if (localStorage.getItem(`level3Completed`) === 'true') {
         completedLevel3++;
-        const box = document.getElementById(`box31`);
-        if (box) box.classList.add('completed');
     }
 
     // 전체 퍼센트는 항상 21개 기준
@@ -83,7 +81,30 @@ function updateProgress(pageLevel = 1) {
     // 진행률 바는 현재 페이지 기준
     const progressPercentage = Math.round((pageProgress / pageTotal) * 100);
     progressBar.style.setProperty('--target-width', `${progressPercentage}%`);
+
+    // 🔒 잠금 상태 표시 처리
+    for (let i = 1; i <= pageTotal; i++) {
+        const boxId = pageLevel === 1 ? `box${i}` :
+                      pageLevel === 2 ? `box${i + 10}` :
+                      `box31`;
+        const box = document.getElementById(boxId);
+        if (!box) continue;
+
+        const isCompleted =
+            (pageLevel === 1 && localStorage.getItem(`quizCompleted${i}`) === 'true') ||
+            (pageLevel === 2 && localStorage.getItem(`cquizCompleted${i}`) === 'true') ||
+            (pageLevel === 3 && localStorage.getItem(`level3Completed`) === 'true');
+
+        box.classList.remove('completed', 'locked');
+
+        if (isCompleted) {
+            box.classList.add('completed');
+        } else if (pageLevel > currentLevel) {
+            box.classList.add('locked');
+        }
+    }
 }
+
 
 // 문서 로드 시 진행도 업데이트 실행
 document.addEventListener("DOMContentLoaded", function () {
