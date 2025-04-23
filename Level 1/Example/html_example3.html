@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 
+    <!-- 문서 메타정보 및 스타일시트 연결 -->
 <head>
     <meta charset="UTF-8">
     <title>HTML 개념 페이지</title>
@@ -9,13 +10,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+    <!-- 화면 표시 콘텐츠 영역 -->
 <body>
+    <!-- 상단 네비게이션 메뉴 -->
     <div class="header clearfix">
         <a href="../Level 1.html" class="button home-btn">← Level1</a>
         <span>3장 앵커 태그</span>
         <a href="../Quiz/html_quiz3.html" class="button quiz-btn">Quiz →</a>
     </div>
 
+    <!-- 앵커 태그 학습 콘텐츠 -->
     <div class="content-box">
         이번 장에서는 글자 태그 중 하나인 앵커 태그를 알아보자.
         앵커 태그는 a 태그라고도 하며 글자에 하이퍼링크를 달아주는 역할을 한다.
@@ -45,6 +49,7 @@
 
         예제를 살펴보자.
         다음은 절대경로 앵커태그 예시이다.
+        <!-- 외부 연결 예시 (절대경로) -->
         <pre class="codebox">
 &lt;!--절대경로로 웹페이지 연결하기--&gt;
 
@@ -64,6 +69,7 @@
         <img src="src/3-2.png" alt="absolute path">
 
         다음은 아이디 경로 예시이다.
+        <!-- 내부 이동 예시 (ID 경로) -->
         <pre class="codebox">
 &lt;!--아이디경로로 내부에 연결하기--&gt;
 &lt;!DOCTYPE html&gt;
