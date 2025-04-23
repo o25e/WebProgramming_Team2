@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- 헤더 정보 설정: 문자 인코딩, 뷰포트 적응, 페이지 제목 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css 퀴즈</title>
@@ -8,12 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 </head>
 
+    <!-- 위쪽 탐색 모음: 섹션 건너뛰기 단추 -->
 <body>
     <div class="header">
         <a class="btn orange" href="../Example/css_example5.html">← Back</a>
         <span>5장 css 퀴즈</span>
         <a class="btn mint" href="../Test/css_test5.html">Code →</a>
     </div>
+    <!-- 핵심 문제 영역 -->
     <div class="quiz-container">
             <h1>Q. 클래스가 "text"인 요소에 글꼴을 설정하고 싶다면?</h1>
             <div class="options-wrapper">
@@ -24,10 +27,12 @@
             </div>
     </div>
 
+    <!-- 피드백 팝업: 오류 상태 표시 -->
     <div class="alert-overlay" id="alertOverlay">
         <div class="alert-box" id="alertContent"></div>
     </div>
 
+    <!-- 인터랙티브 로직: quiz. js에서 논리가 맞는지 확인 -->
     <script src="quiz.js"></script>
 </body>
 </html>
