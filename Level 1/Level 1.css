@@ -348,11 +348,18 @@ h1 {
 
 /* 푸터 */
 footer {
+    position: relative;
     background-color: #81d4fa;
     color: #fff;
     padding: 20px 0;
     font-size: 14px;
     border-top: 4px dashed #ffeb3b;
+}
+footer .complete {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
 }
 
 /* 애니메이션 */
