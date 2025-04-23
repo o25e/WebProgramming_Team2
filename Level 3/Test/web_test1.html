@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>실습 화면</title>
+    <!-- 구글 jua 폰트와 스타일 시트 갖고 오기 -->
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Level 3.css">
     <link rel="stylesheet" href="web_test.css">
 </head>
 
 <body>
+    <!-- 제목 영역: 뒤로가기 버튼, 제목, 홈 버튼 -->
     <div class="header">
         <a class="btn orange" href="../Level 3.html">← Back</a>
         <span>실습</span>
         <a class="btn mint" href="../Level 3.html">🏠︎ Home</a>
     </div>
+    <!-- 지시문, 힌트 버튼, 힌트문 -->
     <div id="text">
         <p id="instruction" style="margin: 10px auto;">
             아래 화면과 같이 만들어보세요!
@@ -25,9 +28,9 @@
             <span id="hintText" class="hidden"></span>
         </div>
     </div>
-
+    <!-- 실습할 이미지 -->
     <img id="target" class="small-img" src="image/1.png" alt="target webpage image">
-
+    <!-- 결과창과 코드 입력창 -->
     <div id="work" class="wrapWindow">
         <div id="output" class="left">
             <h3>실행 결과</h3>
@@ -37,19 +40,21 @@
             <h3 class="">HTML</h3>
             <h3 class="hidden">CSS</h3>
             <div class="code">
+                <!-- HTML과 CSS 바꾸는 탭 -->
                 <div class="tabs">
                     <button class="tab-btn active">HTML</button><button class="tab-btn">CSS</button>
                 </div>
+                <!-- 코드 입력창 -->
                 <textarea id="htmlCode" class="" oninput="updateOutput()" placeholder="HTML 코드를 작성하세요!"></textarea>
                 <textarea id="cssCode" class="hidden" oninput="updateOutput()" placeholder="CSS 코드를 작성하세요!"></textarea>
             </div>
         </div>
     </div>
 
-    <script src="iframe.js"></script>
-    <script src="hint.js"></script>
-    <script src="tabs.js"></script>
-    <script src="tabkey.js"></script>
+    <script src="../../iframe.js"></script>
+    <script src="../../hint.js"></script>
+    <script src="../../tabs.js"></script>
+    <script src="../../tabkey.js"></script>
 </body>
 
 </html>
