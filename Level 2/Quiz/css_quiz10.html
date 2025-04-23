@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <!-- 헤더 정보 설정: 문자 인코딩, 뷰포트 적응, 페이지 제목 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 </head>
 
+    <!-- 맨 위 탐색 모음: 되돌리기 버튼, 섹션 제목, 보기 코드 버튼 포함 -->
 <body>
     <div class="header">
         <a class="btn orange" href="../Example/css_example10.html">← Back</a>
         <span>10장 css 퀴즈</span>
         <a class="btn mint" href="../Test/css_test10.html">Code →</a>
     </div>
+    <!-- 제목 컨테이너: 문제 줄거리와 네 가지 옵션 포함 -->
     <div class="quiz-container">
             <h1>Q. 문단 줄 간격을 설정하고, 내부 여백을 설정하는 CSS 속성 조합은?</h1>
             <div class="options-wrapper">
@@ -23,11 +26,11 @@
                 <div class="option"data-correct="false">height, spacing</div>
             </div>
     </div>
-
+<!-- 답안 제시 플로트: 자바스크립트 컨트롤로 표시 -->
     <div class="alert-overlay" id="alertOverlay">
         <div class="alert-box" id="alertContent"></div>
     </div>
-
+<!-- 대화형 논리 스크립트: 클릭과 피드백 표시 -->
     <script src="quiz.js"></script>
 </body>
 </html>
