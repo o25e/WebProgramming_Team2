@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <!-- 헤더 정보 설정: 문자 인코딩, 뷰포트 적응, 페이지 제목 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 </head>
 
+    <!-- 상단 탐색 모음: 되돌리기 버튼, 제목, 코드 보기 버튼 포함 -->
 <body>
     <div class="header">
         <a class="btn orange" href="../Example/css_example1.html">← Back</a>
         <span>1장 css 퀴즈</span>
         <a class="btn mint" href="../Test/css_test1.html">Code →</a>
     </div>
+    <!-- 제목 컨테이너: 문제 줄거리와 네 가지 옵션 포함 -->
     <div class="quiz-container">
             <h1>Q. CSS는 웹페이지에서 어떤 역할을 하나요?</h1>
             <div class="options-wrapper">
@@ -24,10 +27,12 @@
             </div>
     </div>
 
+    <!-- 답안 제시 플로트: 기본적으로 숨김, 자바스크립트 컨트롤로 표시 -->
     <div class="alert-overlay" id="alertOverlay">
         <div class="alert-box" id="alertContent"></div>
     </div>
 
+    <!-- 인터랙티브 로직: 클릭과 힌트 표시 -->
     <script src="quiz.js"></script>
 </body>
 </html>
